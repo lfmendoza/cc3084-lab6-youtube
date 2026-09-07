@@ -1,0 +1,41 @@
+{
+  "model_id": "pysentimiento/robertuito-sentiment-analysis",
+  "framework": "PyTorch via HuggingFace transformers",
+  "transformers_version": "5.16.1",
+  "torch_version": "2.14.0+cu130",
+  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_vocab_size": 30000,
+  "model_class": "RobertaForSequenceClassification",
+  "arquitectura": [
+    "RobertaForSequenceClassification"
+  ],
+  "model_type": "roberta",
+  "n_parametros": 108791043,
+  "n_capas": 12,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "NEG",
+    "1": "NEU",
+    "2": "POS"
+  },
+  "clases": [
+    "NEG",
+    "NEU",
+    "POS"
+  ],
+  "max_length_usado": 128,
+  "model_max_length_tokenizer": 128,
+  "truncation": true,
+  "padding": "longest por lote",
+  "batch_size": 32,
+  "device": "cpu",
+  "cuda_disponible": false,
+  "plataforma": "Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64)",
+  "python": "3.13.14",
+  "seed": 42,
+  "modo": "inferencia con torch.no_grad(), model.eval()",
+  "determinismo": "La inferencia es determinista: no hay dropout activo ni muestreo. La semilla se fija de todos modos para que cualquier operacion estocastica futura sea reproducible.",
+  "fecha_ejecucion_utc": "2026-09-07T03:14:26+00:00",
+  "segundos_de_inferencia": 24.99,
+  "comentarios_por_segundo": 16.2
+}

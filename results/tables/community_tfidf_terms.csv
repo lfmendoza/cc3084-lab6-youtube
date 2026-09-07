@@ -1,0 +1,117 @@
+grupo,termino,tfidf,rango
+C0,diputado,0.07478,1
+C0,pueblo,0.06492,2
+C0,sueldo,0.06083,3
+C0,almuerzo,0.05836,4
+C0,corrupto,0.05541,5
+C0,ganar,0.05427,6
+C0,pagar,0.05213,7
+C0,salario,0.05173,8
+C0,comida,0.05173,9
+C0,gasto,0.05028,10
+C0,roda,0.05028,11
+C0,morir,0.05028,12
+C1,presidente,0.08654,1
+C1,presidente bernardo,0.08568,2
+C1,terminar,0.08568,3
+C1,puente,0.07895,4
+C1,bernardo arevalo,0.07324,5
+C1,senor,0.07054,6
+C1,arevalo,0.0702,7
+C1,tren,0.06993,8
+C1,senor presidente,0.06993,9
+C1,salvador,0.06748,10
+C1,bernardo,0.06441,11
+C1,gobierno,0.06441,12
+C10,woow,1.0,1
+C2,empresa,0.08609,1
+C2,internet,0.07933,2
+C2,tigo,0.07518,3
+C2,libre,0.07518,4
+C2,competencia,0.07518,5
+C2,cliente,0.07518,6
+C2,recargar,0.07518,7
+C2,excelente,0.07191,8
+C2,servicio,0.07027,9
+C2,informacion,0.07027,10
+C2,ley,0.06976,11
+C2,fibra,0.06611,12
+C3,semiya,0.22141,1
+C3,semiya perder,0.22141,2
+C3,recuerdo,0.22141,3
+C3,recuerdo dejar,0.22141,4
+C3,reduse,0.22141,5
+C3,problema recuerdo,0.22141,6
+C3,perder arma,0.22141,7
+C3,persona encargado,0.22141,8
+C3,ecosistema ayude,0.22141,9
+C3,ecosistema,0.22141,10
+C3,encargado,0.22141,11
+C3,encargado ecosistema,0.22141,12
+C4,semilla,0.2289,1
+C4,semilla bernardo,0.2289,2
+C4,saliera,0.2289,3
+C4,saliera corrupcion,0.2289,4
+C4,oportunidad,0.2289,5
+C4,oportunidad guatemala,0.2289,6
+C4,guatemala saliera,0.2289,7
+C4,guatemala cambiar,0.2289,8
+C4,corrupcion emocionante,0.2289,9
+C4,emocionante,0.2289,10
+C4,dictadura,0.2289,11
+C4,dictadura ano,0.2289,12
+C5,entrar,0.13044,1
+C5,deportar,0.11472,2
+C5,crimar,0.09255,3
+C5,entrar ilegalmente,0.09255,4
+C5,pertenesen,0.09255,5
+C5,familia,0.07911,6
+C5,ilegalmente,0.07911,7
+C5,don,0.07911,8
+C5,regresar,0.07911,9
+C5,mexicano,0.07911,10
+C5,casa,0.07911,11
+C5,mexico,0.07706,12
+C6,iniciativa,0.19106,1
+C6,juego,0.19106,2
+C6,excelente iniciativa,0.19106,3
+C6,excelente,0.12835,4
+C6,tradicion,0.11284,5
+C6,trasfondo juego,0.11284,6
+C6,volver popular,0.11284,7
+C6,ulama,0.11284,8
+C6,recrear,0.11284,9
+C6,rescatar tradicion,0.11284,10
+C6,rescatar,0.11284,11
+C6,reflejar,0.11284,12
+C7,video importante,0.40736,1
+C7,tipo espacio,0.40736,2
+C7,espacio,0.40736,3
+C7,importante tipo,0.40736,4
+C7,importante,0.34819,5
+C7,tipo,0.34819,6
+C7,video,0.30622,7
+C8,telefono,0.36208,1
+C8,telefono colocado,0.21385,2
+C8,telguo,0.21385,3
+C8,telguo whatsapp,0.21385,4
+C8,subscribir,0.21385,5
+C8,subscribir boletin,0.21385,6
+C8,pagina,0.21385,7
+C8,pagina web,0.21385,8
+C8,intentar,0.21385,9
+C8,intentar pagina,0.21385,10
+C8,informativo,0.21385,11
+C8,informativo intentar,0.21385,12
+C9,ciudad,0.17667,1
+C9,ciudad guatemala,0.15427,2
+C9,saludos,0.12325,3
+C9,guatemala,0.12015,4
+C9,cuidad,0.11596,5
+C9,guatemala saludos,0.11596,6
+C9,proyecto,0.11596,7
+C9,bello,0.11596,8
+C9,tiempo,0.09912,9
+C9,cuidad guatemala,0.09356,10
+C9,saludos salvador,0.09356,11
+C9,construir,0.09356,12

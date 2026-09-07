@@ -1,0 +1,399 @@
+{
+  "p1": {
+    "pregunta": "¿Los autores recurrentes participan dentro de un solo canal o atraviesan canales?",
+    "motivacion": "El EDA mostro que 46 autores publicaron mas de un comentario pero solo 9 lo hicieron en mas de un video. La pregunta es si la recurrencia es fidelidad a un canal o movilidad entre canales.",
+    "n_autores_recurrentes": 46,
+    "pct_autores_recurrentes": 13.86,
+    "recurrentes_en_un_solo_video": 37,
+    "pct_recurrentes_en_un_solo_video": 80.43,
+    "recurrentes_en_un_solo_canal": 42,
+    "pct_recurrentes_en_un_solo_canal": 91.3,
+    "recurrentes_multicanal": 4,
+    "max_canales_por_autor": 2,
+    "respuesta": "La recurrencia es abrumadoramente intra-video. De 46 autores con mas de un comentario, 37 (80.4%) los publicaron todos en el mismo video y 42 (91.3%) dentro de un solo canal. Solo 4 autores atraviesan canales, con un maximo de 2 canales distintos. En esta muestra 'comentar mas' significa insistir en el mismo hilo, no seguir a varios emisores."
+  },
+  "p2": {
+    "pregunta": "¿Los videos con mas respuestas tienen tambien mayor diversidad de autores?",
+    "motivacion": "reply_count no permite construir aristas, pero si mide cuanta conversacion genero cada comentario. Si mas respuestas vinieran con mas autores distintos, la conversacion seria colectiva; si no, seria un puado de hilos aislados.",
+    "n": 19,
+    "spearman_respuestas_vs_autores": {
+      "rho": 0.6965,
+      "p": 0.00092,
+      "significativo": true
+    },
+    "spearman_respuestas_vs_diversidad": {
+      "rho": -0.6626,
+      "p": 0.00199,
+      "significativo": true
+    },
+    "spearman_comentarios_vs_diversidad": {
+      "rho": -0.7315,
+      "p": 0.00037,
+      "significativo": true
+    },
+    "total_respuestas": 51,
+    "videos_con_respuestas": 9,
+    "diversidad_media": 0.9331,
+    "diversidad_min": 0.7111,
+    "tabla": [
+      {
+        "video_id": "lj983NWyAQY",
+        "n_com": 25,
+        "n_aut": 25,
+        "n_rep": 16,
+        "likes": 1697,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "OkXlHx0hx-8",
+        "n_com": 25,
+        "n_aut": 18,
+        "n_rep": 13,
+        "likes": 25,
+        "diversidad": 0.72
+      },
+      {
+        "video_id": "6W4u8sGEnGM",
+        "n_com": 45,
+        "n_aut": 32,
+        "n_rep": 11,
+        "likes": 90,
+        "diversidad": 0.7111111111111111
+      },
+      {
+        "video_id": "PjmxCj-a9Hg",
+        "n_com": 25,
+        "n_aut": 19,
+        "n_rep": 4,
+        "likes": 20,
+        "diversidad": 0.76
+      },
+      {
+        "video_id": "n8iP75gIpmw",
+        "n_com": 161,
+        "n_aut": 128,
+        "n_rep": 3,
+        "likes": 358,
+        "diversidad": 0.7950310559006211
+      },
+      {
+        "video_id": "ndAZjHqzzT8",
+        "n_com": 12,
+        "n_aut": 10,
+        "n_rep": 1,
+        "likes": 3,
+        "diversidad": 0.8333333333333334
+      },
+      {
+        "video_id": "06mFNPU0aB8",
+        "n_com": 14,
+        "n_aut": 13,
+        "n_rep": 1,
+        "likes": 12,
+        "diversidad": 0.9285714285714286
+      },
+      {
+        "video_id": "b_Hkrkl3adA",
+        "n_com": 7,
+        "n_aut": 7,
+        "n_rep": 1,
+        "likes": 1,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "is3Mk5oC19g",
+        "n_com": 7,
+        "n_aut": 7,
+        "n_rep": 1,
+        "likes": 0,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "3Nfp9h5avBI",
+        "n_com": 2,
+        "n_aut": 2,
+        "n_rep": 0,
+        "likes": 0,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "JkpVO1hx2f8",
+        "n_com": 3,
+        "n_aut": 3,
+        "n_rep": 0,
+        "likes": 4,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "X_FAIef8qlE",
+        "n_com": 1,
+        "n_aut": 1,
+        "n_rep": 0,
+        "likes": 0,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "WIUZtitfLRw",
+        "n_com": 6,
+        "n_aut": 6,
+        "n_rep": 0,
+        "likes": 1,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "UhL9y3KUl8E",
+        "n_com": 1,
+        "n_aut": 1,
+        "n_rep": 0,
+        "likes": 2,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "TT4qJ5FXHYE",
+        "n_com": 4,
+        "n_aut": 4,
+        "n_rep": 0,
+        "likes": 8,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "j43HgwYFKfk",
+        "n_com": 50,
+        "n_aut": 49,
+        "n_rep": 0,
+        "likes": 91,
+        "diversidad": 0.98
+      },
+      {
+        "video_id": "s0eco-BofOs",
+        "n_com": 1,
+        "n_aut": 1,
+        "n_rep": 0,
+        "likes": 0,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "yLZS3JiEBg8",
+        "n_com": 16,
+        "n_aut": 16,
+        "n_rep": 0,
+        "likes": 13,
+        "diversidad": 1.0
+      },
+      {
+        "video_id": "zweosulrwA8",
+        "n_com": 1,
+        "n_aut": 1,
+        "n_rep": 0,
+        "likes": 0,
+        "diversidad": 1.0
+      }
+    ],
+    "respuesta": "El numero absoluto de respuestas crece con el numero de autores (rho=0.697, p=0.00092), pero la *diversidad* relativa (autores unicos por comentario) se relaciona negativamente con el volumen (rho=-0.731, p=0.00037): en los videos mas comentados hay proporcionalmente mas autores que repiten. Aun asi la diversidad media es 0.933, muy cerca de 1: casi cada comentario proviene de una persona distinta."
+  },
+  "p3": {
+    "pregunta": "¿Que consultas de recoleccion recuperaron contenido perteneciente a multiples comunidades, y hasta que punto la consulta determina la comunidad?",
+    "motivacion": "source_query describe el muestreo, no el tema. Si cada comunidad correspondiera exactamente a una consulta, las 'comunidades' serian un artefacto del procedimiento de recoleccion y no una estructura de audiencia.",
+    "n_consultas_con_videos_comentados": 7,
+    "consultas_en_varias_comunidades": {
+      "@quorumgt": 2,
+      "@quorumgt/videos": 5,
+      "Quorum GT": 2,
+      "guatemala noticias": 4
+    },
+    "n_consultas_en_varias_comunidades": 4,
+    "nmi_consulta_vs_comunidad": 0.6386,
+    "ari_consulta_vs_comunidad": 0.0834,
+    "tabla_cruzada": {
+      "C0": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 1,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 1,
+        "guatemala noticias": 2
+      },
+      "C1": {
+        "@GobiernodeGuatemala": 1,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 1,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 1
+      },
+      "C10": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 1,
+        "guatemala noticias": 0
+      },
+      "C11": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 1,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C2": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 3,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C3": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 1
+      },
+      "C4": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 1,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C5": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 1
+      },
+      "C6": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 1,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C7": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 1,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C8": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 1,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 0,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      },
+      "C9": {
+        "@GobiernodeGuatemala": 0,
+        "@quorumgt": 0,
+        "@quorumgt/videos": 0,
+        "Gobierno de la República de Guatemala": 0,
+        "Municipalidad de Guatemala": 1,
+        "Quorum GT": 0,
+        "guatemala noticias": 0
+      }
+    },
+    "nota_metricas": "NMI y ARI miden lo mismo de forma distinta: el NMI no corrige por azar y se infla cuando una de las particiones tiene muchos grupos pequenos (aqui, 9 singletons de 12 comunidades). El ARI si corrige por azar, por lo que es la cifra a la que hay que atender.",
+    "respuesta": "De las 7 consultas que recuperaron videos con comentarios, 4 aparecen en mas de una comunidad. La concordancia entre consulta y comunidad es NMI=0.639 pero ARI=0.083. El ARI, que corrige por azar, es bajo: la particion en comunidades NO es una relectura de la consulta de recoleccion. El NMI resulta alto solo porque la particion tiene 9 singletons, y una particion muy fragmentada comparte informacion con casi cualquier etiquetado. La conclusion es que las comunidades responden a audiencia compartida y no al muestreo, aunque el muestreo determina que agrupamientos pueden llegar a observarse."
+  },
+  "p4": {
+    "pregunta": "¿El sentimiento del comentario se asocia con su longitud y con los 'me gusta' que recibe?",
+    "motivacion": "El 61.6% de los comentarios se clasifico como negativo. Vale preguntar si la negatividad viene acompanada de textos mas largos (mas argumentacion) y de mas o menos aprobacion de otros usuarios.",
+    "longitud_mediana_por_clase": {
+      "NEG": 132.5,
+      "NEU": 41.0,
+      "POS": 76.0
+    },
+    "kruskal_longitud": {
+      "H": 73.9042,
+      "p": 0.0,
+      "significativo": true
+    },
+    "me_gusta_mediana_por_clase": {
+      "NEG": 0.0,
+      "NEU": 1.0,
+      "POS": 2.0
+    },
+    "me_gusta_medio_por_clase": {
+      "NEG": 1.66,
+      "NEU": 7.4,
+      "POS": 16.97
+    },
+    "kruskal_me_gusta": {
+      "H": 27.5768,
+      "p": 1e-06,
+      "significativo": true
+    },
+    "spearman_probPOS_vs_me_gusta": {
+      "rho": 0.2197,
+      "p": 8e-06,
+      "significativo": true
+    },
+    "n_por_clase": {
+      "NEG": 250,
+      "NEU": 77,
+      "POS": 79
+    },
+    "respuesta": "Si, en las dos direcciones. Los comentarios negativos son los mas largos (mediana 132 caracteres frente a 76 de los positivos y 41 de los neutros; Kruskal-Wallis H=73.9, p=0.0), pero reciben menos aprobacion: mediana de 0 'me gusta' frente a 2 de los positivos (H=27.6, p=1e-06). La critica se argumenta mas y se premia menos en esta muestra."
+  },
+  "p5": {
+    "pregunta": "¿Las visualizaciones de un video predicen su posicion en la red de audiencia compartida?",
+    "motivacion": "Un video muy visto podria atraer audiencia de muchos otros contenidos y quedar central en la proyeccion video-video. Si no ocurre, el papel estructural de un video no se deduce de su popularidad.",
+    "n": 19,
+    "spearman_views_vs_degree": {
+      "rho": 0.2887,
+      "p": 0.23067,
+      "significativo": false
+    },
+    "spearman_views_vs_betweenness": {
+      "rho": 0.3139,
+      "p": 0.19059,
+      "significativo": false
+    },
+    "spearman_comentarios_vs_degree": {
+      "rho": 0.6781,
+      "p": 0.00142,
+      "significativo": true
+    },
+    "video_mas_visto": [
+      {
+        "raw_id": "lj983NWyAQY",
+        "display_name": "Plan 2032 Ciudad de Guatemala",
+        "view_count": 304089.0,
+        "degree": 0,
+        "betweenness_ponderada": 0.0
+      }
+    ],
+    "video_mas_central": [
+      {
+        "raw_id": "n8iP75gIpmw",
+        "display_name": "Qué rico come tu diputado",
+        "view_count": 11775.0,
+        "degree": 4,
+        "betweenness_ponderada": 0.150327
+      }
+    ],
+    "respuesta": "No de forma significativa. Con n=19, la correlacion de rangos entre visualizaciones y grado en la proyeccion es rho=0.289 (p=0.2307) y con betweenness rho=0.314 (p=0.1906). El video mas visto de la muestra (Plan 2032 Ciudad de Guatemala, 304,089 vistas) tiene grado 0, mientras que el mas central es Qué rico come tu diputado. El numero de comentarios observados si predice el grado (rho=0.678, p=0.0014): la posicion estructural depende de la participacion recolectada, no de la visibilidad."
+  }
+}

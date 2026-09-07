@@ -1,0 +1,49 @@
+agrupacion,grupo,n,comparable_n_mayor_igual_10,n_NEG,pct_NEG,n_NEU,pct_NEU,n_POS,pct_POS,confianza_media,confianza_mediana,polaridad_neta,etiqueta_mayoritaria,grupo_label
+video,n8iP75gIpmw,161,True,130,80.75,22,13.66,9,5.59,0.8373,0.9014,-75.16,NEG,Qué rico come tu diputado
+video,j43HgwYFKfk,50,True,29,58.0,10,20.0,11,22.0,0.8032,0.8319,-36.0,NEG,La cooptación de Walter Mazariegos en la USAC
+video,6W4u8sGEnGM,45,True,18,40.0,14,31.11,13,28.89,0.7612,0.7792,-11.11,NEG,Inician los trabajos de recuperación del Puente Belice II.
+video,lj983NWyAQY,25,True,2,8.0,3,12.0,20,80.0,0.835,0.8737,72.0,POS,Plan 2032 Ciudad de Guatemala
+video,PjmxCj-a9Hg,25,True,16,64.0,5,20.0,4,16.0,0.7873,0.8531,-48.0,NEG,Conferencia de Prensa del Gobierno de Guatemala. #LaRondaGt
+video,OkXlHx0hx-8,25,True,18,72.0,5,20.0,2,8.0,0.724,0.7074,-64.0,NEG,EE.UU. envía a mexicanos deportados a Guatemala antes de su regreso a México | Noticias Telemundo
+video,yLZS3JiEBg8,16,True,9,56.25,2,12.5,5,31.25,0.8871,0.9309,-25.0,NEG,Arroz con pollo a la MONOPOLIO
+video,06mFNPU0aB8,14,True,4,28.57,7,50.0,3,21.43,0.7326,0.7581,-7.14,NEU,Capturan a presuntos delincuentes disfrazados de mujer señalados de cometer asalto
+video,ndAZjHqzzT8,12,True,4,33.33,4,33.33,4,33.33,0.7602,0.8494,0.0,NEG,Internet: escoger el menos malo
+video,is3Mk5oC19g,7,False,6,85.71,1,14.29,0,0.0,0.736,0.7439,-85.71,NEG,Capturan a ladrón que había quedado grabado mientras robaba en una parroquia de Retalhuleu
+video,b_Hkrkl3adA,7,False,6,85.71,1,14.29,0,0.0,0.8335,0.8372,-85.71,NEG,Bloqueos en Guatemala este 31 de agosto por alza en combustibles afectan rutas principales
+video,WIUZtitfLRw,6,False,4,66.67,1,16.67,1,16.67,0.8514,0.9214,-50.0,NEG,Caminar en una ciudad hecha para carros
+video,TT4qJ5FXHYE,4,False,1,25.0,0,0.0,3,75.0,0.9496,0.9507,50.0,POS,"I’x K’at: el primer equipo guatemalteco de pelota maya, conformado únicamente por mujeres."
+video,JkpVO1hx2f8,3,False,1,33.33,0,0.0,2,66.67,0.6428,0.6281,33.34,POS,10 Preguntas a un año del Paro Nacional
+video,3Nfp9h5avBI,2,False,1,50.0,1,50.0,0,0.0,0.8795,0.8795,-50.0,NEU,"Noticiero en Directo 1 pm, 28 de Agosto de 2026"
+video,X_FAIef8qlE,1,False,1,100.0,0,0.0,0,0.0,0.8537,0.8537,-100.0,NEG,Cruzando la ciudad a puro Transmetro
+video,UhL9y3KUl8E,1,False,0,0.0,0,0.0,1,100.0,0.9743,0.9743,100.0,POS,SHAI WA: la vecina queer de Casa Presidencial
+video,s0eco-BofOs,1,False,0,0.0,0,0.0,1,100.0,0.7521,0.7521,100.0,POS,¿Quiénes pagan más en Centroamérica?
+video,zweosulrwA8,1,False,0,0.0,1,100.0,0,0.0,0.5853,0.5853,0.0,NEU,Edén por Salud: empleo inclusivo para personas con discapacidad en Antigua | Super - Episodio 2
+canal,UCE4rsXcgDb6e1-a9iTbWzfg,256,True,179,69.92,40,15.62,37,14.45,0.8292,0.8942,-55.47,NEG,Quorum
+canal,UC-ZtFBHzgkYFh7whZkuR_Ag,70,True,34,48.57,19,27.14,17,24.29,0.7705,0.789,-24.28,NEG,Gobierno de la República de Guatemala
+canal,UCRwA1NUcUnwsly35ikGhp0A,25,True,18,72.0,5,20.0,2,8.0,0.724,0.7074,-64.0,NEG,Noticias Telemundo
+canal,UCXa6LVjBzUtmcM3cwbd9e2w,25,True,2,8.0,3,12.0,20,80.0,0.835,0.8737,72.0,POS,Municipalidad de Guatemala
+canal,UCVpSRoZgngfSL03Nlbjtq9A,14,True,4,28.57,7,50.0,3,21.43,0.7326,0.7581,-7.14,NEU,Noti7
+canal,UCEepOY2svuxbsJ-zsAPT9Fg,7,False,6,85.71,1,14.29,0,0.0,0.8335,0.8372,-85.71,NEG,PrensaLibreOficial
+canal,UCt5Dw7ePnn0AqPqRF8Xpjkw,7,False,6,85.71,1,14.29,0,0.0,0.736,0.7439,-85.71,NEG,TN23 Guatemala
+canal,UCdSVqHGHzyMTXSafUHY-e-w,2,False,1,50.0,1,50.0,0,0.0,0.8795,0.8795,-50.0,NEU,Noticiero Guatevisión 13 Hrs.
+comunidad,C0,225,True,171,76.0,34,15.11,20,8.89,0.8265,0.884,-67.11,NEG,C0
+comunidad,C1,84,True,38,45.24,26,30.95,20,23.81,0.7642,0.789,-21.43,NEG,C1
+comunidad,C2,34,True,17,50.0,7,20.59,10,29.41,0.836,0.9169,-20.59,NEG,C2
+comunidad,C5,25,True,18,72.0,5,20.0,2,8.0,0.724,0.7074,-64.0,NEG,C5
+comunidad,C9,25,True,2,8.0,3,12.0,20,80.0,0.835,0.8737,72.0,POS,C9
+comunidad,C6,4,False,1,25.0,0,0.0,3,75.0,0.9496,0.9507,50.0,POS,C6
+comunidad,C4,3,False,1,33.33,0,0.0,2,66.67,0.6428,0.6281,33.34,POS,C4
+comunidad,C3,2,False,1,50.0,1,50.0,0,0.0,0.8795,0.8795,-50.0,NEU,C3
+comunidad,C11,1,False,0,0.0,1,100.0,0,0.0,0.5853,0.5853,0.0,NEU,C11
+comunidad,C10,1,False,0,0.0,0,0.0,1,100.0,0.7521,0.7521,100.0,POS,C10
+comunidad,C7,1,False,0,0.0,0,0.0,1,100.0,0.9743,0.9743,100.0,POS,C7
+comunidad,C8,1,False,1,100.0,0,0.0,0,0.0,0.8537,0.8537,-100.0,NEG,C8
+categoria,News & Politics,335,True,216,64.48,57,17.01,62,18.51,0.8169,0.876,-45.97,NEG,News & Politics
+categoria,Entertainment,70,True,34,48.57,19,27.14,17,24.29,0.7705,0.789,-24.28,NEG,Entertainment
+categoria,Nonprofits & Activism,1,False,0,0.0,1,100.0,0,0.0,0.5853,0.5853,0.0,NEU,Nonprofits & Activism
+consulta de recoleccion,@quorumgt/videos,231,True,166,71.86,37,16.02,28,12.12,0.8338,0.8977,-59.74,NEG,@quorumgt/videos
+consulta de recoleccion,guatemala noticias,55,True,35,63.64,15,27.27,5,9.09,0.7473,0.7816,-54.55,NEG,guatemala noticias
+consulta de recoleccion,Gobierno de la República de Guatemala,45,True,18,40.0,14,31.11,13,28.89,0.7612,0.7792,-11.11,NEG,Gobierno de la República de Guatemala
+consulta de recoleccion,@GobiernodeGuatemala,25,True,16,64.0,5,20.0,4,16.0,0.7873,0.8531,-48.0,NEG,@GobiernodeGuatemala
+consulta de recoleccion,@quorumgt,25,True,13,52.0,3,12.0,9,36.0,0.7874,0.802,-16.0,NEG,@quorumgt
+consulta de recoleccion,Municipalidad de Guatemala,25,True,2,8.0,3,12.0,20,80.0,0.835,0.8737,72.0,POS,Municipalidad de Guatemala

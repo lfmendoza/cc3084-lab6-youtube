@@ -1,0 +1,121 @@
+grupo,termino,tfidf,rango
+C0,usac,0.20636,1
+C0,noticias guatemala,0.14701,2
+C0,mazariegos,0.14701,3
+C0,noticias,0.12681,4
+C0,combustibles,0.11861,5
+C0,walter mazariegos,0.11861,6
+C0,bloqueos,0.11861,7
+C0,walter,0.11861,8
+C0,ladrón,0.11861,9
+C0,31,0.11861,10
+C1,disfrazados,0.19868,1
+C1,noticias,0.15073,2
+C1,del,0.15073,3
+C1,de,0.14583,4
+C1,belice,0.11734,5
+C1,belice ii,0.11734,6
+C1,asalto,0.11734,7
+C1,asaltantes,0.11734,8
+C1,capturan presuntos,0.11734,9
+C1,televisiete,0.11734,10
+C2,internet,0.23681,1
+C2,arroz,0.13986,2
+C2,caminar,0.13986,3
+C2,arroz con,0.13986,4
+C2,telefonía,0.13986,5
+C2,telefonía caminar,0.13986,6
+C2,tigo,0.13986,7
+C2,caminar en,0.13986,8
+C2,principiantes,0.13986,9
+C2,principiantes ley,0.13986,10
+C3,noticiero,0.29395,1
+C3,guatevision,0.29395,2
+C3,directo,0.29395,3
+C3,en directo,0.29395,4
+C3,emisión,0.23716,5
+C3,emisión en,0.23716,6
+C3,noticiero guatevision,0.23716,7
+C3,en,0.16572,8
+C3,marisol,0.14007,9
+C3,padilla noticiero,0.14007,10
+C4,nacional,0.33284,1
+C4,paro,0.33284,2
+C4,paro nacional,0.33284,3
+C4,10,0.19658,4
+C4,año,0.19658,5
+C4,10 preguntas,0.19658,6
+C4,2023,0.19658,7
+C4,2023 10,0.19658,8
+C4,preguntas un,0.19658,9
+C4,quorum paro,0.19658,10
+C5,telemundo,0.21567,1
+C5,mexicanos,0.19722,2
+C5,noticias,0.19308,3
+C5,noticias telemundo,0.17345,4
+C5,telemundo noticias,0.17345,5
+C5,uu,0.17345,6
+C5,ee uu,0.17345,7
+C5,ee,0.17345,8
+C5,miles,0.13994,9
+C5,miles de,0.13994,10
+C6,únicamente por,0.21736,1
+C6,únicamente,0.21736,2
+C6,at,0.21736,3
+C6,at el,0.21736,4
+C6,por mujeres,0.21736,5
+C6,primer,0.21736,6
+C6,primer equipo,0.21736,7
+C6,pelota,0.21736,8
+C6,pelota maya,0.21736,9
+C6,mujeres,0.21736,10
+C7,wa la,0.27108,1
+C7,wa,0.27108,2
+C7,vecina queer,0.27108,3
+C7,shai,0.27108,4
+C7,shai wa,0.27108,5
+C7,queer,0.27108,6
+C7,queer de,0.27108,7
+C7,presidencial,0.27108,8
+C7,la vecina,0.27108,9
+C7,de casa,0.27108,10
+C8,transmetro,0.34457,1
+C8,zona18 centrasur,0.23696,2
+C8,zona18,0.23696,3
+C8,transmetro ciudaddeguatemala,0.23696,4
+C8,puro,0.23696,5
+C8,puro transmetro,0.23696,6
+C8,muniguate,0.23696,7
+C8,muniguate zona18,0.23696,8
+C8,cruzando la,0.23696,9
+C8,cruzando,0.23696,10
+C9,plan 2032,0.17972,1
+C9,plan,0.17972,2
+C9,público,0.17972,3
+C9,movilidad,0.17972,4
+C9,2032,0.17972,5
+C9,ciudad,0.13634,6
+C9,transmetro metroriel,0.10614,7
+C9,vivir,0.10614,8
+C9,servidor,0.10614,9
+C9,ricardo quiñónez,0.10614,10
+C10,impuestos,0.25407,1
+C10,rica,0.15006,2
+C10,quiénes,0.15006,3
+C10,rica panamá,0.15006,4
+C10,regresivas,0.15006,5
+C10,regresivas impuestos,0.15006,6
+C10,pobreza,0.15006,7
+C10,quiénes pagan,0.15006,8
+C10,políticas,0.15006,9
+C10,políticas regresivas,0.15006,10
+C11,antigua,0.20809,1
+C11,antigua super,0.20809,2
+C11,super,0.20809,3
+C11,super episodio,0.20809,4
+C11,salud,0.20809,5
+C11,salud empleo,0.20809,6
+C11,por salud,0.20809,7
+C11,personas,0.20809,8
+C11,personas con,0.20809,9
+C11,para personas,0.20809,10
