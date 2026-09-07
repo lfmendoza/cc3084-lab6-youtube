@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d18" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d17" for="node" attr.name="largo_medio_comentario" attr.type="string" />
+  <key id="d16" for="node" attr.name="n_canales" attr.type="long" />
+  <key id="d15" for="node" attr.name="n_videos" attr.type="long" />
+  <key id="d14" for="node" attr.name="respuestas_recibidas" attr.type="long" />
+  <key id="d13" for="node" attr.name="me_gusta_recibidos" attr.type="long" />
+  <key id="d12" for="node" attr.name="n_autores" attr.type="long" />
+  <key id="d11" for="node" attr.name="n_comentarios" attr.type="long" />
+  <key id="d10" for="node" attr.name="view_count" attr.type="double" />
+  <key id="d9" for="node" attr.name="source_group" attr.type="string" />
+  <key id="d8" for="node" attr.name="source_query" attr.type="string" />
+  <key id="d7" for="node" attr.name="category" attr.type="string" />
+  <key id="d6" for="node" attr.name="channel_name" attr.type="string" />
+  <key id="d5" for="node" attr.name="channel_id" attr.type="string" />
+  <key id="d4" for="node" attr.name="handle" attr.type="string" />
+  <key id="d3" for="node" attr.name="display_name" attr.type="string" />
+  <key id="d2" for="node" attr.name="raw_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="bipartite" attr.type="long" />
+  <key id="d0" for="node" attr.name="node_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="V:06mFNPU0aB8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">06mFNPU0aB8</data>
+      <data key="d3">Capturan a presuntos delincuentes disfrazados de mujer señalados de cometer asalto</data>
+      <data key="d4">@Noti7Guatemala</data>
+      <data key="d5">UCVpSRoZgngfSL03Nlbjtq9A</data>
+      <data key="d6">Noti7</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">guatemala noticias</data>
+      <data key="d9">topic</data>
+      <data key="d10">6692.0</data>
+      <data key="d11">14</data>
+      <data key="d12">13</data>
+      <data key="d13">12</data>
+      <data key="d14">1</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:3Nfp9h5avBI">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">3Nfp9h5avBI</data>
+      <data key="d3">Noticiero en Directo 1 pm, 28 de Agosto de 2026</data>
+      <data key="d4">@GuatevisionNoticiero</data>
+      <data key="d5">UCdSVqHGHzyMTXSafUHY-e-w</data>
+      <data key="d6">Noticiero Guatevisión 13 Hrs.</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">guatemala noticias</data>
+      <data key="d9">topic</data>
+      <data key="d10">573.0</data>
+      <data key="d11">2</data>
+      <data key="d12">2</data>
+      <data key="d13">0</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:6W4u8sGEnGM">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">6W4u8sGEnGM</data>
+      <data key="d3">Inician los trabajos de recuperación del Puente Belice II.</data>
+      <data key="d4">@GobiernodelaRepublicadeGuatema</data>
+      <data key="d5">UC-ZtFBHzgkYFh7whZkuR_Ag</data>
+      <data key="d6">Gobierno de la República de Guatemala</data>
+      <data key="d7">Entertainment</data>
+      <data key="d8">Gobierno de la República de Guatemala</data>
+      <data key="d9">topic</data>
+      <data key="d10">11670.0</data>
+      <data key="d11">45</data>
+      <data key="d12">32</data>
+      <data key="d13">90</data>
+      <data key="d14">11</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:JkpVO1hx2f8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">JkpVO1hx2f8</data>
+      <data key="d3">10 Preguntas a un año del Paro Nacional</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">673.0</data>
+      <data key="d11">3</data>
+      <data key="d12">3</data>
+      <data key="d13">4</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:OkXlHx0hx-8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">OkXlHx0hx-8</data>
+      <data key="d3">EE.UU. envía a mexicanos deportados a Guatemala antes de su regreso a México | Noticias Telemundo</data>
+      <data key="d4">@noticias</data>
+      <data key="d5">UCRwA1NUcUnwsly35ikGhp0A</data>
+      <data key="d6">Noticias Telemundo</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">guatemala noticias</data>
+      <data key="d9">topic</data>
+      <data key="d10">14200.0</data>
+      <data key="d11">25</data>
+      <data key="d12">18</data>
+      <data key="d13">25</data>
+      <data key="d14">13</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:PjmxCj-a9Hg">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">PjmxCj-a9Hg</data>
+      <data key="d3">Conferencia de Prensa del Gobierno de Guatemala. #LaRondaGt</data>
+      <data key="d4">@GobiernodelaRepublicadeGuatema</data>
+      <data key="d5">UC-ZtFBHzgkYFh7whZkuR_Ag</data>
+      <data key="d6">Gobierno de la República de Guatemala</data>
+      <data key="d7">Entertainment</data>
+      <data key="d8">@GobiernodeGuatemala</data>
+      <data key="d9">topic</data>
+      <data key="d10">3628.0</data>
+      <data key="d11">25</data>
+      <data key="d12">19</data>
+      <data key="d13">20</data>
+      <data key="d14">4</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:TT4qJ5FXHYE">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">TT4qJ5FXHYE</data>
+      <data key="d3">I’x K’at: el primer equipo guatemalteco de pelota maya, conformado únicamente por mujeres.</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">1075.0</data>
+      <data key="d11">4</data>
+      <data key="d12">4</data>
+      <data key="d13">8</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:UhL9y3KUl8E">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">UhL9y3KUl8E</data>
+      <data key="d3">SHAI WA: la vecina queer de Casa Presidencial</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">1755.0</data>
+      <data key="d11">1</data>
+      <data key="d12">1</data>
+      <data key="d13">2</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:WIUZtitfLRw">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">WIUZtitfLRw</data>
+      <data key="d3">Caminar en una ciudad hecha para carros</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">422.0</data>
+      <data key="d11">6</data>
+      <data key="d12">6</data>
+      <data key="d13">1</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:X_FAIef8qlE">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">X_FAIef8qlE</data>
+      <data key="d3">Cruzando la ciudad a puro Transmetro</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">1140.0</data>
+      <data key="d11">1</data>
+      <data key="d12">1</data>
+      <data key="d13">0</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:b_Hkrkl3adA">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">b_Hkrkl3adA</data>
+      <data key="d3">Bloqueos en Guatemala este 31 de agosto por alza en combustibles afectan rutas principales</data>
+      <data key="d4">@PrensaLibreOficial</data>
+      <data key="d5">UCEepOY2svuxbsJ-zsAPT9Fg</data>
+      <data key="d6">PrensaLibreOficial</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">guatemala noticias</data>
+      <data key="d9">topic</data>
+      <data key="d10">5469.0</data>
+      <data key="d11">7</data>
+      <data key="d12">7</data>
+      <data key="d13">1</data>
+      <data key="d14">1</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:is3Mk5oC19g">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">is3Mk5oC19g</data>
+      <data key="d3">Capturan a ladrón que había quedado grabado mientras robaba en una parroquia de Retalhuleu</data>
+      <data key="d4">@TN23TodoNoticias</data>
+      <data key="d5">UCt5Dw7ePnn0AqPqRF8Xpjkw</data>
+      <data key="d6">TN23 Guatemala</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">guatemala noticias</data>
+      <data key="d9">topic</data>
+      <data key="d10">4616.0</data>
+      <data key="d11">7</data>
+      <data key="d12">7</data>
+      <data key="d13">0</data>
+      <data key="d14">1</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:j43HgwYFKfk">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">j43HgwYFKfk</data>
+      <data key="d3">La cooptación de Walter Mazariegos en la USAC</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt</data>
+      <data key="d9">topic</data>
+      <data key="d10">10156.0</data>
+      <data key="d11">50</data>
+      <data key="d12">49</data>
+      <data key="d13">91</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:lj983NWyAQY">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">lj983NWyAQY</data>
+      <data key="d3">Plan 2032 Ciudad de Guatemala</data>
+      <data key="d4">@MunicipalidaddeGuatemala-1551</data>
+      <data key="d5">UCXa6LVjBzUtmcM3cwbd9e2w</data>
+      <data key="d6">Municipalidad de Guatemala</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">Municipalidad de Guatemala</data>
+      <data key="d9">topic</data>
+      <data key="d10">304089.0</data>
+      <data key="d11">25</data>
+      <data key="d12">25</data>
+      <data key="d13">1697</data>
+      <data key="d14">16</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:n8iP75gIpmw">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">n8iP75gIpmw</data>
+      <data key="d3">Qué rico come tu diputado</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">Quorum GT</data>
+      <data key="d9">topic</data>
+      <data key="d10">11775.0</data>
+      <data key="d11">161</data>
+      <data key="d12">128</data>
+      <data key="d13">358</data>
+      <data key="d14">3</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:ndAZjHqzzT8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">ndAZjHqzzT8</data>
+      <data key="d3">Internet: escoger el menos malo</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">717.0</data>
+      <data key="d11">12</data>
+      <data key="d12">10</data>
+      <data key="d13">3</data>
+      <data key="d14">1</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:s0eco-BofOs">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">s0eco-BofOs</data>
+      <data key="d3">¿Quiénes pagan más en Centroamérica?</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">Quorum GT</data>
+      <data key="d9">topic</data>
+      <data key="d10">220.0</data>
+      <data key="d11">1</data>
+      <data key="d12">1</data>
+      <data key="d13">0</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:yLZS3JiEBg8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">yLZS3JiEBg8</data>
+      <data key="d3">Arroz con pollo a la MONOPOLIO</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">News &amp; Politics</data>
+      <data key="d8">@quorumgt/videos</data>
+      <data key="d9">channel</data>
+      <data key="d10">1954.0</data>
+      <data key="d11">16</data>
+      <data key="d12">16</data>
+      <data key="d13">13</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <node id="V:zweosulrwA8">
+      <data key="d0">video</data>
+      <data key="d1">1</data>
+      <data key="d2">zweosulrwA8</data>
+      <data key="d3">Edén por Salud: empleo inclusivo para personas con discapacidad en Antigua | Super - Episodio 2</data>
+      <data key="d4">@quorumgt</data>
+      <data key="d5">UCE4rsXcgDb6e1-a9iTbWzfg</data>
+      <data key="d6">Quorum</data>
+      <data key="d7">Nonprofits &amp; Activism</data>
+      <data key="d8">@quorumgt</data>
+      <data key="d9">topic</data>
+      <data key="d10">52.0</data>
+      <data key="d11">1</data>
+      <data key="d12">1</data>
+      <data key="d13">0</data>
+      <data key="d14">0</data>
+      <data key="d15">0</data>
+      <data key="d16">0</data>
+      <data key="d17" />
+    </node>
+    <edge source="V:06mFNPU0aB8" target="V:6W4u8sGEnGM">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:6W4u8sGEnGM" target="V:PjmxCj-a9Hg">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:PjmxCj-a9Hg" target="V:n8iP75gIpmw">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:WIUZtitfLRw" target="V:ndAZjHqzzT8">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:WIUZtitfLRw" target="V:yLZS3JiEBg8">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:b_Hkrkl3adA" target="V:n8iP75gIpmw">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:is3Mk5oC19g" target="V:j43HgwYFKfk">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:j43HgwYFKfk" target="V:n8iP75gIpmw">
+      <data key="d18">2</data>
+    </edge>
+    <edge source="V:j43HgwYFKfk" target="V:ndAZjHqzzT8">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:n8iP75gIpmw" target="V:ndAZjHqzzT8">
+      <data key="d18">1</data>
+    </edge>
+    <edge source="V:ndAZjHqzzT8" target="V:yLZS3JiEBg8">
+      <data key="d18">2</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,21 @@
+{
+  "nodos_totales": 351,
+  "nodos_autor": 332,
+  "nodos_video": 19,
+  "aristas": 343,
+  "suma_pesos": 406,
+  "n_comentarios_usados": 406,
+  "inv_suma_pesos_igual_comentarios": true,
+  "inv_una_arista_por_par_autor_video": true,
+  "inv_autores_provienen_de_author_channel_id": true,
+  "inv_videos_provienen_de_video_id": true,
+  "inv_todas_las_aristas_cruzan_tipos": true,
+  "inv_grafo_no_dirigido": true,
+  "inv_sin_autoloops": true,
+  "inv_endpoints_existen": true,
+  "inv_reply_count_no_usado_como_arista": true,
+  "nota_reply_count": "reply_count nunca entra en la construccion de aristas. Solo se guarda como atributo agregado del nodo y de la arista, porque indica cuantas respuestas recibio un comentario sin identificar quien las escribio.",
+  "es_bipartito_networkx": true,
+  "peso_maximo_arista": 6,
+  "aristas_con_peso_mayor_a_1": 40
+}

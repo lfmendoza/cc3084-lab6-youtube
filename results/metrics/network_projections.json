@@ -1,0 +1,14 @@
+{
+  "aristas_author_projection": 10732,
+  "aristas_video_projection": 11,
+  "pesos_author_projection_incorrectos": 0,
+  "pesos_video_projection_incorrectos": 0,
+  "ejemplos_incorrectos_author": [],
+  "ejemplos_incorrectos_video": [],
+  "inv_pesos_author_projection_correctos": true,
+  "inv_pesos_video_projection_correctos": true,
+  "inv_clique_por_video_presente": true,
+  "peso_max_author_projection": 2,
+  "peso_max_video_projection": 2,
+  "aristas_video_projection_peso_mayor_1": 2
+}

@@ -1,0 +1,185 @@
+{
+  "videos_aislados_en_proyeccion_video": [
+    {
+      "video_id": "OkXlHx0hx-8",
+      "titulo": "EE.UU. envía a mexicanos deportados a Guatemala antes de su regreso a México | Noticias Telemundo",
+      "canal": "Noticias Telemundo",
+      "n_comentarios_observados": 25,
+      "n_autores_observados": 18
+    },
+    {
+      "video_id": "lj983NWyAQY",
+      "titulo": "Plan 2032 Ciudad de Guatemala",
+      "canal": "Municipalidad de Guatemala",
+      "n_comentarios_observados": 25,
+      "n_autores_observados": 25
+    },
+    {
+      "video_id": "TT4qJ5FXHYE",
+      "titulo": "I’x K’at: el primer equipo guatemalteco de pelota maya, conformado únicamente por mujeres.",
+      "canal": "Quorum",
+      "n_comentarios_observados": 4,
+      "n_autores_observados": 4
+    },
+    {
+      "video_id": "JkpVO1hx2f8",
+      "titulo": "10 Preguntas a un año del Paro Nacional",
+      "canal": "Quorum",
+      "n_comentarios_observados": 3,
+      "n_autores_observados": 3
+    },
+    {
+      "video_id": "3Nfp9h5avBI",
+      "titulo": "Noticiero en Directo 1 pm, 28 de Agosto de 2026",
+      "canal": "Noticiero Guatevisión 13 Hrs.",
+      "n_comentarios_observados": 2,
+      "n_autores_observados": 2
+    },
+    {
+      "video_id": "UhL9y3KUl8E",
+      "titulo": "SHAI WA: la vecina queer de Casa Presidencial",
+      "canal": "Quorum",
+      "n_comentarios_observados": 1,
+      "n_autores_observados": 1
+    },
+    {
+      "video_id": "X_FAIef8qlE",
+      "titulo": "Cruzando la ciudad a puro Transmetro",
+      "canal": "Quorum",
+      "n_comentarios_observados": 1,
+      "n_autores_observados": 1
+    },
+    {
+      "video_id": "s0eco-BofOs",
+      "titulo": "¿Quiénes pagan más en Centroamérica?",
+      "canal": "Quorum",
+      "n_comentarios_observados": 1,
+      "n_autores_observados": 1
+    },
+    {
+      "video_id": "zweosulrwA8",
+      "titulo": "Edén por Salud: empleo inclusivo para personas con discapacidad en Antigua | Super - Episodio 2",
+      "canal": "Quorum",
+      "n_comentarios_observados": 1,
+      "n_autores_observados": 1
+    }
+  ],
+  "n_videos_aislados_proyeccion": 9,
+  "pct_videos_aislados_proyeccion": 47.37,
+  "n_autores_aislados_proyeccion": 4,
+  "autores_aislados_proyeccion": [
+    "UC6xI_MOaxajIWpoP8BH6E_Q",
+    "UCPLW0HE3siElqCgXfgWxMqg",
+    "UCQM2tCKRRytVDRxNUfCDqQQ",
+    "UC_NRVt2UP88ZNTwzrZ66JSg"
+  ],
+  "n_autores_grado_1_en_bipartita": 323,
+  "pct_autores_grado_1_en_bipartita": 97.29,
+  "componentes_author_projection": [
+    276,
+    25,
+    18,
+    4,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1
+  ],
+  "componentes_video_projection": [
+    10,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "n_componentes_pequenas_author_projection": 7,
+  "grupos_desconectados_bipartita": [
+    {
+      "tamano": 286,
+      "n_autores": 276,
+      "videos": [
+        "La cooptación de Walter Mazariegos en la USAC",
+        "Inician los trabajos de recuperación del Puente Belice II.",
+        "Conferencia de Prensa del Gobierno de Guatemala. #LaRondaGt",
+        "Capturan a presuntos delincuentes disfrazados de mujer señalados de cometer asalto",
+        "Caminar en una ciudad hecha para carros",
+        "Internet: escoger el menos malo",
+        "Arroz con pollo a la MONOPOLIO",
+        "Capturan a ladrón que había quedado grabado mientras robaba en una parroquia de Retalhuleu",
+        "Qué rico come tu diputado",
+        "Bloqueos en Guatemala este 31 de agosto por alza en combustibles afectan rutas principales"
+      ]
+    },
+    {
+      "tamano": 26,
+      "n_autores": 25,
+      "videos": [
+        "Plan 2032 Ciudad de Guatemala"
+      ]
+    },
+    {
+      "tamano": 19,
+      "n_autores": 18,
+      "videos": [
+        "EE.UU. envía a mexicanos deportados a Guatemala antes de su regreso a México | Noticias Telemundo"
+      ]
+    },
+    {
+      "tamano": 5,
+      "n_autores": 4,
+      "videos": [
+        "I’x K’at: el primer equipo guatemalteco de pelota maya, conformado únicamente por mujeres."
+      ]
+    },
+    {
+      "tamano": 4,
+      "n_autores": 3,
+      "videos": [
+        "10 Preguntas a un año del Paro Nacional"
+      ]
+    },
+    {
+      "tamano": 3,
+      "n_autores": 2,
+      "videos": [
+        "Noticiero en Directo 1 pm, 28 de Agosto de 2026"
+      ]
+    },
+    {
+      "tamano": 2,
+      "n_autores": 1,
+      "videos": [
+        "¿Quiénes pagan más en Centroamérica?"
+      ]
+    },
+    {
+      "tamano": 2,
+      "n_autores": 1,
+      "videos": [
+        "Cruzando la ciudad a puro Transmetro"
+      ]
+    },
+    {
+      "tamano": 2,
+      "n_autores": 1,
+      "videos": [
+        "Edén por Salud: empleo inclusivo para personas con discapacidad en Antigua | Super - Episodio 2"
+      ]
+    },
+    {
+      "tamano": 2,
+      "n_autores": 1,
+      "videos": [
+        "SHAI WA: la vecina queer de Casa Presidencial"
+      ]
+    }
+  ],
+  "distincion_aislamiento": "Un nodo aislado en estas redes esta aislado EN LOS DATOS OBSERVADOS, no en YouTube. Solo se recolectaron comentarios de 19 videos y no necesariamente todos los comentarios de cada uno, asi que la ausencia de un vinculo puede deberse a la cobertura del muestreo y no a la ausencia de audiencia compartida real."
+}
