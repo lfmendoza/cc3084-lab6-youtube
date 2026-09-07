@@ -1069,15 +1069,15 @@ La proyeccion de autores se dispuso con un trazado construido a partir de su est
 
 | Video A | Video B | Autores compartidos |
 |---|---|---|
-| Internet: escoger el menos malo | Arroz con pollo a la MONOPOLIO | 2 |
 | La cooptación de Walter Mazariegos en l… | Qué rico come tu diputado | 2 |
+| Internet: escoger el menos malo | Arroz con pollo a la MONOPOLIO | 2 |
 | Capturan a presuntos delincuentes disfr… | Inician los trabajos de recuperación de… | 1 |
-| Conferencia de Prensa del Gobierno de G… | Qué rico come tu diputado | 1 |
 | Inician los trabajos de recuperación de… | Conferencia de Prensa del Gobierno de G… | 1 |
-| Caminar en una ciudad hecha para carros | Arroz con pollo a la MONOPOLIO | 1 |
+| Conferencia de Prensa del Gobierno de G… | Qué rico come tu diputado | 1 |
 | Caminar en una ciudad hecha para carros | Internet: escoger el menos malo | 1 |
-| Capturan a ladrón que había quedado gra… | La cooptación de Walter Mazariegos en l… | 1 |
+| Caminar en una ciudad hecha para carros | Arroz con pollo a la MONOPOLIO | 1 |
 | Bloqueos en Guatemala este 31 de agosto… | Qué rico come tu diputado | 1 |
+| Capturan a ladrón que había quedado gra… | La cooptación de Walter Mazariegos en l… | 1 |
 | La cooptación de Walter Mazariegos en l… | Internet: escoger el menos malo | 1 |
 | Qué rico come tu diputado | Internet: escoger el menos malo | 1 |
 
@@ -1592,8 +1592,8 @@ Igual que con los autores, la condicion de articulador se verifica eliminando el
 | Proy. video-video | Qué rico come tu diputado | Quorum | 4 | 10 | 12 | +2 | 10 | 5 | 10 |
 | Proy. video-video | Internet: escoger el menos … | Quorum | 4 | 10 | 11 | +1 | 10 | 7 | 9 |
 | Proy. video-video | La cooptación de Walter Maz… | Quorum | 3 | 10 | 11 | +1 | 10 | 8 | 10 |
-| Proy. video-video | Conferencia de Prensa del G… | Gobierno de la … | 2 | 10 | 11 | +1 | 10 | 7 | 9 |
 | Proy. video-video | Inician los trabajos de rec… | Gobierno de la … | 2 | 10 | 11 | +1 | 10 | 8 | 10 |
+| Proy. video-video | Conferencia de Prensa del G… | Gobierno de la … | 2 | 10 | 11 | +1 | 10 | 7 | 9 |
 
 En la proyeccion video-video hay 5 videos articuladores de 19. El de mayor impacto es «Que rico come tu diputado»: al eliminarlo, la componente mayor pasa de 10 a 4 videos y se generan nodos aislados nuevos. Ese video es el punto de paso de la mayor parte de la audiencia compartida del corpus, y no por su alcance publicitario sino porque es donde mas gente recolectada comento.
 
@@ -1760,8 +1760,8 @@ Hay 199 emojis en 61 de 406 comentarios (15.0%). Se eliminan de `texto_limpio` p
 | max_length / truncation / batch | 128 / True / 32 |
 | Dispositivo | cpu (Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64)) |
 | Semilla | 42 |
-| Fecha de ejecucion (UTC) | 2026-09-07T03:14:26+00:00 |
-| Tiempo de inferencia | 24.99 s (16.2 com./s) |
+| Fecha de ejecucion (UTC) | 2026-09-07T03:42:35+00:00 |
+| Tiempo de inferencia | 25.58 s (15.9 com./s) |
 
 **Por que este modelo y no un lexico.** RoBERTuito es un RoBERTa preentrenado desde cero sobre aproximadamente 500 millones de tweets en espanol y afinado para polaridad con el corpus TASS 2020. Cumple tres condiciones que los comentarios de este conjunto exigen: es un modelo **de espanol**, no multilingue, de modo que su vocabulario no compite con otras cien lenguas; su dominio de preentrenamiento es **texto informal de redes sociales**, que comparte con los comentarios de YouTube la brevedad, los emojis y la ortografia libre; y devuelve **tres clases con probabilidades**, lo que permite reportar distribucion y confianza sin inventar umbrales.
 

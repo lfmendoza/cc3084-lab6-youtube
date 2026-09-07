@@ -108,7 +108,7 @@ def build_bipartite(comments: pd.DataFrame, videos: pd.DataFrame) -> nx.Graph:
             n_videos=0, n_canales=0, largo_medio_comentario=np.nan,
         )
 
-    for r in edges.itertuples():
+    for r in edges.sort_values(["author_channel_id", "video_id"]).itertuples():
         G.add_edge(
             A_PREFIX + r.author_channel_id, V_PREFIX + r.video_id,
             weight=int(r.weight), me_gusta=int(r.me_gusta),
@@ -188,7 +188,7 @@ def export_bipartite_tables(G: nx.Graph) -> tuple[pd.DataFrame, pd.DataFrame]:
             "largo_medio_comentario": d["largo_medio_comentario"],
         })
     nodes_df = pd.DataFrame(nodes).sort_values(
-        ["node_type", "strength"], ascending=[True, False])
+        ["node_type", "strength", "node_id"], ascending=[True, False, True])
 
     edges = []
     for u, v, d in G.edges(data=True):
@@ -205,7 +205,8 @@ def export_bipartite_tables(G: nx.Graph) -> tuple[pd.DataFrame, pd.DataFrame]:
             "source_label": G.nodes[a]["display_name"],
             "target_label": G.nodes[b]["display_name"],
         })
-    edges_df = pd.DataFrame(edges).sort_values("weight", ascending=False)
+    edges_df = pd.DataFrame(edges).sort_values(
+        ["weight", "source", "target"], ascending=[False, True, True])
 
     nodes_df.to_csv(C.NETWORKS / "bipartite_nodes.csv", index=False)
     edges_df.to_csv(C.NETWORKS / "bipartite_edges.csv", index=False)
@@ -244,7 +245,26 @@ def build_projections(G: nx.Graph) -> tuple[nx.Graph, nx.Graph]:
         AP.nodes[n]["_videos"] = sorted(G.nodes[v]["raw_id"] for v in nb)
         if len(nb) == 1:
             AP.nodes[n]["_video_title"] = G.nodes[nb[0]]["display_name"]
-    return AP, VP
+    return _canonical(AP), _canonical(VP)
+
+
+def _canonical(P: nx.Graph) -> nx.Graph:
+    """Reconstruye el grafo con nodos y aristas en orden lexicografico.
+
+    ``weighted_projected_graph`` recorre conjuntos de vecinos, cuyo orden de
+    iteracion depende de la aleatorizacion de hashes de Python y por tanto
+    cambia entre ejecuciones. El contenido del grafo es identico, pero el
+    orden de insercion no, y eso se filtra a las tablas exportadas, al
+    GraphML, al orden de dibujo de las aristas translucidas y al estado
+    inicial de los trazados de fuerzas. Reinsertar en orden canonico hace que
+    todas las salidas sean reproducibles byte a byte.
+    """
+    Q = nx.Graph()
+    for n in sorted(P.nodes()):
+        Q.add_node(n, **P.nodes[n])
+    for u, v in sorted((tuple(sorted((a, b))) for a, b in P.edges())):
+        Q.add_edge(u, v, **P.edges[u, v])
+    return Q
 
 
 def verify_projection_weights(G: nx.Graph, AP: nx.Graph, VP: nx.Graph,
@@ -306,7 +326,8 @@ def export_projection_tables(AP: nx.Graph, VP: nx.Graph) -> None:
              "source_label": P.nodes[u]["display_name"],
              "target_label": P.nodes[v]["display_name"]}
             for u, v, d in P.edges(data=True)
-        ]).sort_values("weight", ascending=False)
+        ]).sort_values(["weight", "source", "target"],
+                        ascending=[False, True, True])
         nodes = pd.DataFrame([
             {"node_id": n, "raw_id": d["raw_id"], "node_type": d["node_type"],
              "display_name": d["display_name"], "handle": d["handle"],
@@ -317,7 +338,7 @@ def export_projection_tables(AP: nx.Graph, VP: nx.Graph) -> None:
              "n_comentarios_observados": d["n_comentarios"],
              "n_videos_comentados": d["n_videos"]}
             for n, d in P.nodes(data=True)
-        ]).sort_values("strength", ascending=False)
+        ]).sort_values(["strength", "node_id"], ascending=[False, True])
         for folder in (C.NETWORKS, C.TABLES):
             edges.to_csv(folder / f"{name}_edges.csv", index=False)
         nodes.to_csv(C.NETWORKS / f"{name}_nodes.csv", index=False)
@@ -342,7 +363,8 @@ def topology(G: nx.Graph, name: str, kind: str) -> dict:
     n, m = G.number_of_nodes(), G.number_of_edges()
     degrees = np.array([d for _, d in G.degree()], dtype=float)
     strengths = np.array([d for _, d in G.degree(weight="weight")], dtype=float)
-    comps = sorted(nx.connected_components(G), key=len, reverse=True)
+    comps = sorted(nx.connected_components(G),
+                   key=lambda p: (-len(p), sorted(p)[0]))
     giant = G.subgraph(comps[0]).copy() if comps else G.copy()
     isolates = [n_ for n_ in nx.isolates(G)]
 
@@ -480,12 +502,14 @@ def peripheral_analysis(G: nx.Graph, AP: nx.Graph, VP: nx.Graph,
     recolectaron comentarios de 19 videos y una parte de los comentarios de
     cada uno.
     """
-    vp_iso = [n for n in VP.nodes() if VP.degree(n) == 0]
-    ap_iso = [n for n in AP.nodes() if AP.degree(n) == 0]
-    bip_deg1_authors = [n for n, d in G.nodes(data=True)
-                        if d["node_type"] == "author" and G.degree(n) == 1]
-    comps_ap = sorted(nx.connected_components(AP), key=len, reverse=True)
-    comps_vp = sorted(nx.connected_components(VP), key=len, reverse=True)
+    vp_iso = sorted(n for n in VP.nodes() if VP.degree(n) == 0)
+    ap_iso = sorted(n for n in AP.nodes() if AP.degree(n) == 0)
+    bip_deg1_authors = sorted(n for n, d in G.nodes(data=True)
+                              if d["node_type"] == "author" and G.degree(n) == 1)
+    comps_ap = sorted(nx.connected_components(AP),
+                      key=lambda p: (-len(p), sorted(p)[0]))
+    comps_vp = sorted(nx.connected_components(VP),
+                      key=lambda p: (-len(p), sorted(p)[0]))
 
     return {
         "videos_aislados_en_proyeccion_video": [
@@ -510,9 +534,10 @@ def peripheral_analysis(G: nx.Graph, AP: nx.Graph, VP: nx.Graph,
         "grupos_desconectados_bipartita": [
             {"tamano": len(c),
              "n_autores": sum(1 for x in c if G.nodes[x]["node_type"] == "author"),
-             "videos": [G.nodes[x]["display_name"] for x in c
-                        if G.nodes[x]["node_type"] == "video"]}
-            for c in sorted(nx.connected_components(G), key=len, reverse=True)
+             "videos": sorted(G.nodes[x]["display_name"] for x in c
+                              if G.nodes[x]["node_type"] == "video")}
+            for c in sorted(nx.connected_components(G),
+                            key=lambda p: (-len(p), sorted(p)[0]))
         ],
         "distincion_aislamiento": (
             "Un nodo aislado en estas redes esta aislado EN LOS DATOS "
@@ -556,7 +581,9 @@ def detect_communities(VP: nx.Graph, AP: nx.Graph) -> dict:
     ]:
         parts = nxcom.louvain_communities(
             P, weight="weight", resolution=C.LOUVAIN_RESOLUTION, seed=C.SEED)
-        parts = sorted(parts, key=len, reverse=True)
+        # Desempate por el nodo menor: dos comunidades del mismo tamano deben
+        # recibir siempre el mismo indice entre ejecuciones.
+        parts = sorted(parts, key=lambda p: (-len(p), sorted(p)[0]))
         sizes = [len(p) for p in parts]
         q = nxcom.modularity(P, parts, weight="weight",
                              resolution=C.LOUVAIN_RESOLUTION) if P.number_of_edges() else np.nan
@@ -591,9 +618,9 @@ def detect_communities(VP: nx.Graph, AP: nx.Graph) -> dict:
     # Comparacion con una particion alternativa como control de robustez.
     if VP.number_of_edges():
         gm = sorted(nxcom.greedy_modularity_communities(VP, weight="weight"),
-                    key=len, reverse=True)
+                    key=lambda p: (-len(p), sorted(p)[0]))
         lp = sorted(nxcom.asyn_lpa_communities(VP, weight="weight", seed=C.SEED),
-                    key=len, reverse=True)
+                    key=lambda p: (-len(p), sorted(p)[0]))
         louv = [set(p) for p in out["video_projection"]["_partition"]]
         out["robustez_video_projection"] = {
             "greedy_modularity_n_comunidades": len(gm),
@@ -605,7 +632,8 @@ def detect_communities(VP: nx.Graph, AP: nx.Graph) -> dict:
             "nmi_louvain_vs_label_propagation": round(
                 _nmi(VP, louv, [set(x) for x in lp]), 4),
             "componentes_conexas": [
-                len(c) for c in sorted(nx.connected_components(VP), key=len, reverse=True)],
+                len(c) for c in sorted(nx.connected_components(VP),
+                                       key=lambda p: (-len(p), sorted(p)[0]))],
             "interpretacion": (
                 "Las particiones de tres algoritmos distintos se comparan con "
                 "informacion mutua normalizada. Un NMI alto indica que la "
@@ -703,7 +731,8 @@ def centrality(P: nx.Graph, kind: str) -> pd.DataFrame:
     clust = nx.clustering(Q, weight="weight")
 
     comp_of = {}
-    for i, c in enumerate(sorted(nx.connected_components(Q), key=len, reverse=True)):
+    for i, c in enumerate(sorted(nx.connected_components(Q),
+                                 key=lambda p: (-len(p), sorted(p)[0]))):
         for x in c:
             comp_of[x] = (i, len(c))
 
@@ -751,7 +780,8 @@ def centrality(P: nx.Graph, kind: str) -> pd.DataFrame:
     df["rank_betweenness"] = df["betweenness_ponderada"].rank(
         ascending=False, method="min").astype(int)
     df["rank_pagerank"] = df["pagerank"].rank(ascending=False, method="min").astype(int)
-    return df.sort_values(["betweenness_ponderada", "strength"], ascending=False)
+    return df.sort_values(["betweenness_ponderada", "strength", "node_id"],
+                          ascending=[False, False, True])
 
 
 def articulation_analysis(graphs: dict[str, nx.Graph]) -> pd.DataFrame:
@@ -772,7 +802,7 @@ def articulation_analysis(graphs: dict[str, nx.Graph]) -> pd.DataFrame:
             sub = G.subgraph(c)
             if sub.number_of_nodes() > 2:
                 candidates |= set(nx.articulation_points(sub))
-        for x in sorted(candidates, key=lambda z: -G.degree(z)):
+        for x in sorted(candidates, key=lambda z: (-G.degree(z), z)):
             H = G.copy()
             H.remove_node(x)
             new_comps = nx.number_connected_components(H)
@@ -800,8 +830,8 @@ def articulation_analysis(graphs: dict[str, nx.Graph]) -> pd.DataFrame:
             })
     df = pd.DataFrame(rows)
     if len(df):
-        df = df.sort_values(["red", "delta_componentes", "degree"],
-                            ascending=[True, False, False])
+        df = df.sort_values(["red", "delta_componentes", "degree", "node_id"],
+                            ascending=[True, False, False, True])
     return df
 
 
@@ -831,7 +861,7 @@ def bridge_authors(G: nx.Graph, AP: nx.Graph, VP: nx.Graph,
     base_comps = nx.number_connected_components(VP)
     base_edges = VP.number_of_edges()
 
-    authors = [n for n, d in G.nodes(data=True) if d["node_type"] == "author"]
+    authors = sorted(n for n, d in G.nodes(data=True) if d["node_type"] == "author")
     rows = []
     for a in authors:
         vids = [v for v in G.neighbors(a)]
@@ -878,8 +908,8 @@ def bridge_authors(G: nx.Graph, AP: nx.Graph, VP: nx.Graph,
     df = pd.DataFrame(rows)
     return df.sort_values(
         ["es_puente_verificado", "delta_componentes_al_eliminar",
-         "n_videos_distintos", "n_comentarios"],
-        ascending=False)
+         "n_videos_distintos", "n_comentarios", "author_channel_id"],
+        ascending=[False, False, False, False, True])
 
 
 # =================================================================== figuras ==
@@ -997,7 +1027,8 @@ def vp_layout(VP: nx.Graph) -> dict:
     circular fijo y la rejilla se ordena por id.
     """
     pos: dict = {}
-    comps = sorted(nx.connected_components(VP), key=len, reverse=True)
+    comps = sorted(nx.connected_components(VP),
+                   key=lambda p: (-len(p), sorted(p)[0]))
     nontrivial = [c for c in comps if len(c) > 1]
     isolates = sorted([n for c in comps if len(c) == 1 for n in c])
 
@@ -1032,8 +1063,8 @@ def vp_layout(VP: nx.Graph) -> dict:
 
 def plot_bipartite(G: nx.Graph) -> None:
     """Ejercicio 4.4. Red bipartita COMPLETA, sin filtrar nodos ni aristas."""
-    A = [n for n, d in G.nodes(data=True) if d["node_type"] == "author"]
-    V = [n for n, d in G.nodes(data=True) if d["node_type"] == "video"]
+    A = sorted(n for n, d in G.nodes(data=True) if d["node_type"] == "author")
+    V = sorted(n for n, d in G.nodes(data=True) if d["node_type"] == "video")
     pos = _layout(G, "bipartite", k=0.32, iterations=400)
 
     fig, ax = plt.subplots(figsize=(15, 11))
@@ -1077,11 +1108,11 @@ def plot_bipartite(G: nx.Graph) -> None:
              "amistad, respuesta, conversacion ni aprobacion.")
 
     # --- vista ampliada del nucleo conectado ---
-    core_authors = [n for n in A if G.degree(n) > 1]
-    core_nodes = set(core_authors) | set(V)
-    H = G.subgraph(core_nodes).copy()
-    H.remove_nodes_from([n for n in list(H.nodes())
-                         if H.nodes[n]["node_type"] == "video" and H.degree(n) == 0])
+    core_authors = sorted(n for n in A if G.degree(n) > 1)
+    H = _canonical(G.subgraph(sorted(set(core_authors) | set(V))))
+    H.remove_nodes_from(sorted(n for n in list(H.nodes())
+                               if H.nodes[n]["node_type"] == "video"
+                               and H.degree(n) == 0))
     if H.number_of_nodes() > 2:
         pos2 = nx.spring_layout(H, seed=C.SEED, k=0.9, iterations=500, weight="weight")
         fig, ax = plt.subplots(figsize=(13, 9))
@@ -1089,8 +1120,8 @@ def plot_bipartite(G: nx.Graph) -> None:
                                width=[1.0 + 1.4 * (d["weight"] - 1)
                                       for *_, d in H.edges(data=True)],
                                edge_color="#444444")
-        av = [n for n, d in H.nodes(data=True) if d["node_type"] == "author"]
-        vv = [n for n, d in H.nodes(data=True) if d["node_type"] == "video"]
+        av = sorted(n for n, d in H.nodes(data=True) if d["node_type"] == "author")
+        vv = sorted(n for n, d in H.nodes(data=True) if d["node_type"] == "video")
         nx.draw_networkx_nodes(H, pos2, nodelist=av, ax=ax, node_color=viz.COLOR_AUTHOR,
                                node_size=[180 + 60 * H.nodes[n]["n_videos"] for n in av],
                                edgecolors="black", linewidths=0.8)
@@ -1133,8 +1164,8 @@ def plot_projections(AP: nx.Graph, VP: nx.Graph, G_ref: nx.Graph) -> None:
     pos = ap_layout(AP, G_ref)
     fig, ax = plt.subplots(figsize=(13.5, 11.5))
     nx.draw_networkx_edges(AP, pos, ax=ax, alpha=0.05, width=0.3, edge_color="#0072B2")
-    multi = [n for n in AP.nodes() if AP.nodes[n]["n_videos"] > 1]
-    single = [n for n in AP.nodes() if AP.nodes[n]["n_videos"] <= 1]
+    multi = sorted(n for n in AP.nodes() if AP.nodes[n]["n_videos"] > 1)
+    single = sorted(n for n in AP.nodes() if AP.nodes[n]["n_videos"] <= 1)
     nx.draw_networkx_nodes(AP, pos, nodelist=single, ax=ax, node_color=viz.COLOR_AUTHOR,
                            node_size=26, alpha=0.8, linewidths=0.25,
                            edgecolors="white")
@@ -1182,8 +1213,8 @@ def plot_projections(AP: nx.Graph, VP: nx.Graph, G_ref: nx.Graph) -> None:
             VP, pos, ax=ax, font_size=7.5,
             edge_labels={(u, v): str(d["weight"]) for u, v, d in VP.edges(data=True)},
             bbox=dict(boxstyle="round,pad=0.12", fc="#FFF6D0", ec="none", alpha=0.9))
-    iso = [n for n in VP.nodes() if VP.degree(n) == 0]
-    con = [n for n in VP.nodes() if VP.degree(n) > 0]
+    iso = sorted(n for n in VP.nodes() if VP.degree(n) == 0)
+    con = sorted(n for n in VP.nodes() if VP.degree(n) > 0)
     nx.draw_networkx_nodes(VP, pos, nodelist=con, ax=ax, node_color=viz.COLOR_VIDEO,
                            node_shape="s",
                            node_size=[220 + 5.5 * VP.nodes[n]["n_comentarios"] for n in con],

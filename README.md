@@ -268,6 +268,17 @@ Otras notas:
   calculan al generar cada gráfico y se persisten en
   `results/figures/_captions.jsonl`. Si cambiaran los datos de entrada, el texto
   del informe cambiaría con ellos.
+- **El pipeline es determinista.** Dos ejecuciones consecutivas producen
+  salidas byte a byte idénticas en las 29 figuras, las 36 tablas, los 10
+  archivos de red y los 18 bloques de métricas. Lo único que cambia entre
+  corridas son la fecha de ejecución y el tiempo de inferencia
+  (`fecha_ejecucion_utc`, `segundos_de_inferencia`), que se registran a
+  propósito porque la rúbrica pide documentar cuándo se ejecutó el modelo. Los
+  grafos se reconstruyen en orden lexicográfico de nodos y aristas
+  (`_canonical`) porque `weighted_projected_graph` recorre conjuntos de
+  vecinos, cuyo orden de iteración depende de la aleatorización de hashes de
+  Python; el contenido era idéntico pero el orden se filtraba a las tablas, al
+  GraphML y al dibujo de las aristas translúcidas.
 - Las dependencias están fijadas en `uv.lock`; `uv sync --frozen` reproduce el
   entorno exacto.
 - La única fuente de variación entre máquinas es la descarga inicial del modelo
