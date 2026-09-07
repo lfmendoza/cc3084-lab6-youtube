@@ -3,7 +3,7 @@
 **Laboratorio 6 — CC3084 Data Science — Analisis de redes sociales (YouTube)**
 Documento generado automaticamente por `src/content_analysis.py` a partir de
 `results/metrics/sentiment.json`. Fecha de ejecucion (UTC):
-`2026-09-07T03:48:52+00:00`.
+`2026-09-07T03:52:28+00:00`.
 
 ---
 
@@ -23,7 +23,7 @@ Documento generado automaticamente por `src/content_analysis.py` a partir de
 | Python / plataforma | 3.13.14 / Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64) |
 | Dispositivo de inferencia | `cpu` (CUDA disponible: False) |
 | Semilla | 42 |
-| Tiempo de inferencia | 25.5 s para 406 comentarios (15.9 comentarios/s) |
+| Tiempo de inferencia | 25.73 s para 406 comentarios (15.8 comentarios/s) |
 
 ## 2. Motivo de la seleccion
 
@@ -44,7 +44,44 @@ lexico local. Se eligio `pysentimiento/robertuito-sentiment-analysis` por cuatro
 4. **Devuelve tres clases interpretables con probabilidades**, lo que permite
    reportar distribucion, confianza y casos ambiguos sin inventar umbrales.
 
-### Alternativas descartadas y por que
+### 2.1 Por que es adecuado para el espanol
+
+RoBERTuito **no es un modelo multilingue adaptado**: se preentreno desde cero
+sobre un corpus exclusivamente en espanol, y su tokenizador BPE se aprendio
+sobre ese mismo corpus. Tres consecuencias practicas para estos datos:
+
+* **El vocabulario no compite con otros idiomas.** En un mBERT o un XLM-R, el
+  presupuesto de subpalabras se reparte entre mas de cien lenguas, de modo que
+  el espanol se segmenta en piezas mas cortas y menos informativas. Aqui las
+  palabras frecuentes del corpus (*diputado*, *pueblo*, *corrupto*) tienden a
+  ser tokens unicos o de pocas piezas.
+* **Cubre la morfologia flexiva del espanol.** Conjugaciones, enclisis
+  (*deportarlos*, *verlos*) y diminutivos (*almuercitos*, que aparece en los
+  datos) estan representados en el preentrenamiento.
+* **El corpus de afinado es de espanol y dialectalmente diverso.** TASS 2020
+  incluye variantes de Espana, Mexico, Peru, Uruguay y Costa Rica, lo que
+  reduce (sin eliminar) el desajuste con el espanol de Guatemala. Su limitacion
+  para el lexico guatemalteco se documenta en la seccion 11.
+
+### 2.2 Por que es adecuado para texto de redes sociales
+
+Su corpus de preentrenamiento son ~500 millones de **tweets**, no noticias ni
+resenas ni Wikipedia. Los comentarios de YouTube comparten con los tweets las
+propiedades que rompen a un modelo entrenado en texto formal:
+
+| Propiedad del texto | Presencia en estos datos | Por que importa |
+|---|---|---|
+| Brevedad | longitud mediana de 96,5 caracteres | Un modelo de documentos largos depende de contexto que aqui no existe |
+| Emojis | 199 emojis en 61 de 406 comentarios | El modelo los vio en entrenamiento como texto normalizado |
+| Ortografia libre | *ba* por *va*, *tube* por *tuve*, *corrpcion* | Reduce los tokens fuera de vocabulario |
+| Mayusculas expresivas y puntuacion repetida | frecuentes | Se conservan como senal, no se normalizan a la baja |
+| Menciones y hashtags | 5 y 1 comentarios respectivamente | Tienen token generico propio en el preentrenamiento |
+| Alargamientos y risa | *jajajaja*, repeticiones de vocales | Normalizados igual que en entrenamiento |
+
+Esto no elimina el salto de dominio: sigue habiendo diferencia entre Twitter de
+2020 y YouTube, y esa limitacion se declara en la seccion 11.
+
+### 2.3 Alternativas descartadas y por que
 
 | Alternativa | Motivo del descarte |
 |---|---|

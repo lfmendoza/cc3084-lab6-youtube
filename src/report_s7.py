@@ -280,7 +280,7 @@ def sentimiento(c: Ctx) -> list:
          "confianza), el sarcasmo citado entre comillas, las expresiones de una palabra sin "
          "contexto («Mantenidos») y el lexico guatemalteco ausente del corpus de "
          "entrenamiento («shucos», «tambo», «moronga»). El reporte completo del modelo, con "
-         "las dieciseis limitaciones documentadas y la referencia a la model card, esta en "
+         "las trece limitaciones documentadas y la referencia a la model card, esta en "
          "`results/model/sentiment_model_report.md`."),
         ("callout",
          f"**{st['advertencia_intencion']}** Ademas, no se dispone de un conjunto etiquetado "

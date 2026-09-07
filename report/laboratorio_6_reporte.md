@@ -1760,8 +1760,8 @@ Hay 199 emojis en 61 de 406 comentarios (15.0%). Se eliminan de `texto_limpio` p
 | max_length / truncation / batch | 128 / True / 32 |
 | Dispositivo | cpu (Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64)) |
 | Semilla | 42 |
-| Fecha de ejecucion (UTC) | 2026-09-07T03:48:52+00:00 |
-| Tiempo de inferencia | 25.5 s (15.9 com./s) |
+| Fecha de ejecucion (UTC) | 2026-09-07T03:52:28+00:00 |
+| Tiempo de inferencia | 25.73 s (15.8 com./s) |
 
 **Por que este modelo y no un lexico.** RoBERTuito es un RoBERTa preentrenado desde cero sobre aproximadamente 500 millones de tweets en espanol y afinado para polaridad con el corpus TASS 2020. Cumple tres condiciones que los comentarios de este conjunto exigen: es un modelo **de espanol**, no multilingue, de modo que su vocabulario no compite con otras cien lenguas; su dominio de preentrenamiento es **texto informal de redes sociales**, que comparte con los comentarios de YouTube la brevedad, los emojis y la ortografia libre; y devuelve **tres clases con probabilidades**, lo que permite reportar distribucion y confianza sin inventar umbrales.
 
@@ -1888,7 +1888,7 @@ Los seis comentarios de menor confianza de todo el corpus:
 - «Pero hay que ver el lado bueno si los deportan por la Frontera los carteles los secuestran para sacar dinero a los familiares en USA» — predicho **NEU** con confianza 0.473
 - «Despues de tanta corrpcion y desfalco por los anteriores gobiernos ladrones que esperaba Rolando? ahora si se puede ver que los fondos de nuestros impuestos se estan usando en lo que deberi…» — predicho **POS** con confianza 0.473
 
-La inspeccion de estos casos muestra exactamente donde falla el modelo: la ironia («Ay ricos shucos en la calle jajaja» es una burla y recibe NEG con 0,435 de confianza), el sarcasmo citado entre comillas, las expresiones de una palabra sin contexto («Mantenidos») y el lexico guatemalteco ausente del corpus de entrenamiento («shucos», «tambo», «moronga»). El reporte completo del modelo, con las dieciseis limitaciones documentadas y la referencia a la model card, esta en `results/model/sentiment_model_report.md`.
+La inspeccion de estos casos muestra exactamente donde falla el modelo: la ironia («Ay ricos shucos en la calle jajaja» es una burla y recibe NEG con 0,435 de confianza), el sarcasmo citado entre comillas, las expresiones de una palabra sin contexto («Mantenidos») y el lexico guatemalteco ausente del corpus de entrenamiento («shucos», «tambo», «moronga»). El reporte completo del modelo, con las trece limitaciones documentadas y la referencia a la model card, esta en `results/model/sentiment_model_report.md`.
 
 > **La etiqueta del modelo es una prediccion estadistica sobre la superficie del texto. NO equivale a la intencion real del autor ni a su estado emocional.** Ademas, no se dispone de un conjunto etiquetado a mano de este dominio, por lo que **no se puede reportar exactitud ni F1 sobre estos datos**. Las cifras de esta seccion describen la distribucion de las predicciones, no su correccion.
 

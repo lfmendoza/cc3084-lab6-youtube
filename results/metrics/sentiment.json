@@ -36,9 +36,9 @@
     "seed": 42,
     "modo": "inferencia con torch.no_grad(), model.eval()",
     "determinismo": "La inferencia es determinista: no hay dropout activo ni muestreo. La semilla se fija de todos modos para que cualquier operacion estocastica futura sea reproducible.",
-    "fecha_ejecucion_utc": "2026-09-07T03:48:52+00:00",
-    "segundos_de_inferencia": 25.5,
-    "comentarios_por_segundo": 15.9
+    "fecha_ejecucion_utc": "2026-09-07T03:52:28+00:00",
+    "segundos_de_inferencia": 25.73,
+    "comentarios_por_segundo": 15.8
   },
   "n_comentarios_evaluados": 406,
   "n_comentarios_totales": 406,
