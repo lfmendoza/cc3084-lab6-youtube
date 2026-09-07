@@ -1,0 +1,24 @@
+# Entornos
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Caches de modelos y NLP
+.cache/
+hf_cache/
+nltk_data/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Temporales
+*.log
+*.tmp
+scratch/

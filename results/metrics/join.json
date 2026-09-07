@@ -1,0 +1,14 @@
+{
+  "n_comentarios": 406,
+  "n_videos_catalogo": 293,
+  "comentarios_con_video": 406,
+  "comentarios_sin_video": 0,
+  "pct_comentarios_con_video": 100.0,
+  "video_ids_distintos_en_comentarios": 19,
+  "video_ids_de_comentarios_ausentes_en_videos": [],
+  "videos_con_al_menos_un_comentario_observado": 19,
+  "videos_sin_comentario_observado": 274,
+  "pct_videos_con_comentario_observado": 6.48,
+  "cardinalidad_join": "1 video : N comentarios (uno a muchos)",
+  "tipo_join": "LEFT JOIN comentarios -> videos por video_id"
+}

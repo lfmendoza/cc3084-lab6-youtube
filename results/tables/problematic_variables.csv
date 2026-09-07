@@ -1,0 +1,16 @@
+dataset,variable,clasificacion,evidencia,tratamiento
+comments,viewer_rating,Inutilizable,Vacia en los 406 registros (406 nulos).,Se excluye de todo analisis. Se conserva en el archivo crudo.
+comments,is_pinned,Inutilizable (constante),Valor unico ['False'] en los 406 registros.,Varianza cero: no puede explicar ni segmentar nada. Se convierte a booleano y se documenta.
+comments,reply_count,Uso delicado,Cuenta respuestas recibidas pero no identifica a quien respondio.,Prohibido usarla como arista. Se usa solo como atributo de intensidad del comentario.
+comments,published_text,Uso delicado,"Tiempo relativo al momento de recoleccion ('hace 2 anos'), redondeado por YouTube.",No se convierte a fecha absoluta. Se deriva published_days_approx solo para ordenar.
+comments,like_count_text,Requiere conversion,Texto; 189 registros en blanco (un espacio).,"Parser explicito; blanco -> 0 con bandera like_count_blank, porque YouTube oculta el contador cuando vale 0 (el minimo observado no blanco es 1)."
+comments,video_title / channel_name / channel_id,Redundante,Derivables del join por video_id; verificadas consistentes al 100%.,Se conservan con sufijo _c y se prefiere la version de videos.
+comments,author_name / author_handle,Uso delicado,Etiquetas visibles mutables; no son identificadores. Ademas 14 author_handle vienen percent-encoded (/@ErmeP%C3%A9rez-q4s).,Solo para etiquetas de figuras. El nodo es author_channel_id. Se decodifica el percent-encoding en author_handle_norm.
+videos,published_time,Uso delicado,Tiempo relativo; 13 nulos.,"No se usa como fecha. Se prefiere publish_date (ISO 8601, sin nulos)."
+videos,view_count_text,Requiere conversion,Texto con separador de miles y sufijo 'vistas'; 13 nulos.,Se parsea a view_count_text_num y se usa solo como respaldo de view_count.
+videos,upload_date,Redundante,Identica a publish_date en el 100% de los registros.,Se conserva; los analisis temporales usan publish_date.
+videos,owner_handle,Redundante,Identica a channel_handle en el 100% de los registros.,Se conserva; las etiquetas usan channel_handle.
+videos,query_hits / keywords / dataset_sources,Requiere parseo,Listas serializadas como texto (JSON o separadas por '|').,Se convierten a listas reales antes de contar.
+videos,source_query / source_group,Uso delicado,"Describen el muestreo, no el tema del video.","Se usan para caracterizar cobertura, nunca como etiqueta tematica definitiva."
+videos,description / description_snippet,Faltantes,26 y 25 nulos respectivamente.,Los conteos de texto de video se calculan sobre los no nulos y se reporta el n.
+videos,channel_name,Uso delicado,Nombre visible mutable y potencialmente repetible.,El nodo de canal es channel_id; channel_name solo etiqueta.

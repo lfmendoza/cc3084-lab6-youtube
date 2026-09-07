@@ -1,0 +1,18 @@
+dataset,variable,dtype_cargado,tipo_inferido,n_total,n_no_nulos,n_nulos,pct_nulos,n_vacios_o_espacios,pct_vacios_o_espacios,n_unicos,cardinalidad_rel,es_constante,es_totalmente_vacia,es_llave_candidata,es_pk,ejemplo
+youtube_comments,video_id,str,texto,406,406,0,0.0,0,0.0,19,0.0468,False,False,True,False,j43HgwYFKfk
+youtube_comments,comment_id,str,texto,406,406,0,0.0,0,0.0,406,1.0,False,False,True,True,Ugw-J65a1iYL9hqhELh4AaABAg
+youtube_comments,video_title,str,texto,406,406,0,0.0,0,0.0,19,0.0468,False,False,False,False,La cooptación de Walter Mazariegos en la USAC
+youtube_comments,channel_name,str,texto,406,406,0,0.0,0,0.0,8,0.0197,False,False,False,False,Quorum
+youtube_comments,channel_id,str,texto,406,406,0,0.0,0,0.0,8,0.0197,False,False,True,False,UCE4rsXcgDb6e1-a9iTbWzfg
+youtube_comments,author_name,str,texto,406,406,0,0.0,0,0.0,332,0.8177,False,False,False,False,@MarcosCarillo-b1r
+youtube_comments,author_channel_id,str,texto,406,406,0,0.0,0,0.0,332,0.8177,False,False,True,False,UCdFlugHJJa4l3YqWuNRmvXw
+youtube_comments,text,str,texto,406,406,0,0.0,0,0.0,404,0.9951,False,False,False,False,Ese corrupto amigo de la vieja fiscal los tengo que verbose en la carcel
+youtube_comments,source_query,str,texto,406,406,0,0.0,0,0.0,6,0.0148,False,False,False,False,@quorumgt
+youtube_comments,source_group,str,texto,406,406,0,0.0,0,0.0,2,0.0049,False,False,False,False,topic
+youtube_comments,dataset_sources,str,texto,406,406,0,0.0,0,0.0,8,0.0197,False,False,False,False,j43HgwYFKfk_out_comments.csv | quorum_complete_comments.csv | youtube_guatemala_...
+youtube_comments,author_handle,str,texto,406,406,0,0.0,0,0.0,332,0.8177,False,False,False,False,/@MarcosCarillo-b1r
+youtube_comments,published_text,str,tiempo_relativo,406,406,0,0.0,0,0.0,39,0.0961,False,False,False,False,hace 6 meses
+youtube_comments,like_count_text,str,entero,406,406,0,0.0,189,46.55,31,0.0764,False,False,False,False, 
+youtube_comments,reply_count,str,entero,406,406,0,0.0,0,0.0,6,0.0148,False,False,False,False,0
+youtube_comments,is_pinned,str,booleano,406,406,0,0.0,0,0.0,1,0.0025,True,False,False,False,False
+youtube_comments,viewer_rating,str,vacia,406,0,406,100.0,0,0.0,0,0.0,True,True,False,False,

@@ -1,0 +1,44 @@
+metrica,valor
+n_videos_catalogo,293
+n_canales_catalogo,97
+n_categorias,11
+n_source_query_videos,21
+n_source_group_videos,3
+n_comentarios,406
+n_autores_unicos,332
+n_videos_con_comentario_observado,19
+n_videos_sin_comentario_observado,274
+pct_videos_con_comentario_observado,6.48
+n_canales_con_comentario_observado,8
+cobertura_canales_pct,8.25
+videos_por_canal,"{""n"": 97, ""suma"": 293.0, ""min"": 1.0, ""p25"": 1.0, ""mediana"": 1.0, ""media"": 3.02, ""p75"": 2.0, ""p90"": 7.400000000000006, ""max"": 32.0, ""std"": 5.14, ""asimetria"": 3.679, ""gini"": 0.5741}"
+canales_con_un_solo_video,65
+top_canales_por_videos,"{""UC-ZtFBHzgkYFh7whZkuR_Ag"": 32, ""UCXa6LVjBzUtmcM3cwbd9e2w"": 27, ""UCE4rsXcgDb6e1-a9iTbWzfg"": 18, ""UCEepOY2svuxbsJ-zsAPT9Fg"": 17, ""UC8u2nvyHewt-mjdWSj0HJmQ"": 14, ""UCaivrAhro2BpsJdrPe-IyRg"": 11, ""UCAutgrPkiLhZxTB-Ujje1fw"": 11, ""UCW_PHqwqCCalvQGOEsVU0jw"": 10, ""UCHsYnV67K3J0yJ4QeciVCww"": 10, ""UC6SA1dVHvAkc6yNS_t5cbGw"": 8}"
+comentarios_por_video_observado,"{""n"": 19, ""suma"": 406.0, ""min"": 1.0, ""p25"": 2.5, ""mediana"": 7.0, ""media"": 21.37, ""p75"": 25.0, ""p90"": 46.0, ""max"": 161.0, ""std"": 36.82, ""asimetria"": 3.352, ""gini"": 0.6596}"
+autores_por_video_observado,"{""n"": 19, ""suma"": 343.0, ""min"": 1.0, ""p25"": 2.5, ""mediana"": 7.0, ""media"": 18.05, ""p75"": 18.5, ""p90"": 35.39999999999999, ""max"": 128.0, ""std"": 29.46, ""asimetria"": 3.222, ""gini"": 0.6402}"
+ratio_comentarios_por_autor_global,1.223
+visualizaciones_catalogo,"{""n"": 293, ""suma"": 17706015.0, ""min"": 2.0, ""p25"": 215.0, ""mediana"": 1175.0, ""media"": 60430.09, ""p75"": 7465.0, ""p90"": 51318.8000000001, ""max"": 8190449.0, ""std"": 515798.31, ""asimetria"": 14.258, ""gini"": 0.9493}"
+visualizaciones_videos_observados,"{""n"": 19, ""suma"": 380876.0, ""min"": 52.0, ""p25"": 695.0, ""mediana"": 1954.0, ""media"": 20046.11, ""p75"": 8424.0, ""p90"": 12259.999999999998, ""max"": 304089.0, ""std"": 68934.23, ""asimetria"": 4.327, ""gini"": 0.8533}"
+suma_visualizaciones_catalogo,17706015.0
+me_gusta,"{""n"": 406, ""suma"": 2325.0, ""min"": 0.0, ""p25"": 0.0, ""mediana"": 1.0, ""media"": 5.73, ""p75"": 2.0, ""p90"": 7.0, ""max"": 405.0, ""std"": 30.66, ""asimetria"": 9.878, ""gini"": 0.8957}"
+suma_me_gusta,2325
+comentarios_con_cero_me_gusta,189
+pct_comentarios_cero_me_gusta,46.55
+respuestas,"{""n"": 406, ""suma"": 51.0, ""min"": 0.0, ""p25"": 0.0, ""mediana"": 0.0, ""media"": 0.13, ""p75"": 0.0, ""p90"": 0.0, ""max"": 7.0, ""std"": 0.58, ""asimetria"": 7.205, ""gini"": 0.9504}"
+suma_respuestas,51
+comentarios_con_al_menos_una_respuesta,30
+pct_comentarios_con_respuesta,7.39
+respuestas_valores_observados,"[0.0, 1.0, 2.0, 3.0, 5.0, 7.0]"
+autores_por_n_comentarios,"{""1"": 286, ""2"": 30, ""3"": 10, ""4"": 2, ""5"": 2, ""6"": 2}"
+autores_con_un_comentario,286
+pct_autores_con_un_comentario,86.14
+autores_en_mas_de_un_video,9
+pct_autores_en_mas_de_un_video,2.71
+autores_en_mas_de_un_canal,4
+max_comentarios_por_autor,6
+max_videos_por_autor,3
+n_hashtags_en_comentarios,1
+n_hashtags_unicos_comentarios,1
+n_hashtags_en_videos,588
+n_emojis_en_comentarios,199
+n_menciones_en_comentarios,5

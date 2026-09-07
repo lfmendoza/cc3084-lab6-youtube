@@ -1,0 +1,15 @@
+{
+  "n_videos_con_comentarios": 19,
+  "n_videos_sin_comentarios": 274,
+  "mediana_views_con_comentarios": 1954.0,
+  "mediana_views_sin_comentarios": 1149.5,
+  "media_views_con_comentarios": 20046.1,
+  "media_views_sin_comentarios": 63230.4,
+  "mannwhitney_U": 2147.5,
+  "mannwhitney_p": 0.20265,
+  "diferencia_significativa_0.05": false,
+  "rango_de_views_de_videos_observados_min": 9,
+  "rango_de_views_de_videos_observados_max": 255,
+  "rango_mediano_de_videos_observados": 126.0,
+  "interpretacion": "No hay evidencia de que los videos con comentarios recolectados sean los mas vistos del catalogo. Su rango de visualizaciones va del puesto 9 al 255 de 293. La cobertura de comentarios responde al procedimiento de recoleccion (source_query), no a la popularidad."
+}

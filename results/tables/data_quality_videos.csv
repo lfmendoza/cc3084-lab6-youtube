@@ -1,0 +1,21 @@
+dataset,variable,dtype_cargado,tipo_inferido,n_total,n_no_nulos,n_nulos,pct_nulos,n_vacios_o_espacios,pct_vacios_o_espacios,n_unicos,cardinalidad_rel,es_constante,es_totalmente_vacia,es_llave_candidata,es_pk,ejemplo
+youtube_videos,video_id,str,texto,293,293,0,0.0,0,0.0,293,1.0,False,False,True,True,-5puKGEqcUc
+youtube_videos,title,str,texto,293,293,0,0.0,0,0.0,274,0.9352,False,False,False,False,INSIVUMEH pronostica incremento de lluvias para el fin de semana en Guatemala
+youtube_videos,channel_name,str,texto,293,293,0,0.0,0,0.0,97,0.3311,False,False,False,False,T13 Noticias Guatemala
+youtube_videos,channel_id,str,texto,293,293,0,0.0,0,0.0,97,0.3311,False,False,True,False,UCq0Cm-3SKthEySQc2JZBi1A
+youtube_videos,source_query,str,texto,293,293,0,0.0,0,0.0,21,0.0717,False,False,False,False,guatemala lluvias
+youtube_videos,source_group,str,texto,293,293,0,0.0,0,0.0,3,0.0102,False,False,False,False,topic
+youtube_videos,dataset_sources,str,texto,293,293,0,0.0,0,0.0,23,0.0785,False,False,False,False,youtube_guatemala.csv | youtube_guatemala_lab.csv | youtube_guatemala_plus.csv
+youtube_videos,channel_handle,str,texto,293,293,0,0.0,0,0.0,97,0.3311,False,False,False,False,/@T13NoticiasGuatemala
+youtube_videos,published_time,str,texto,293,280,13,4.44,0,0.0,80,0.273,False,False,False,False,hace 2 días
+youtube_videos,view_count_text,str,conteo_como_texto,293,280,13,4.44,0,0.0,259,0.884,False,False,False,False,"2,390 vistas"
+youtube_videos,description_snippet,str,texto,293,268,25,8.53,0,0.0,236,0.8055,False,False,False,False,El Departamento de Pronóstico de INSIVUMEH prevé un incremento en las lluvias du...
+youtube_videos,video_url,str,texto,293,293,0,0.0,0,0.0,293,1.0,False,False,False,False,https://www.youtube.com/watch?v=-5puKGEqcUc
+youtube_videos,query_hits,str,lista_serializada,293,293,0,0.0,0,0.0,26,0.0887,False,False,False,False,"[""guatemala lluvias""]"
+youtube_videos,keywords,str,lista_serializada,293,293,0,0.0,0,0.0,106,0.3618,False,False,False,False,"[""Canícula prolongada"", ""Chapin tv"", ""Fenómeno del Niño"", ""Guatemala"", ""Lluvias ..."
+youtube_videos,description,str,texto,293,267,26,8.87,0,0.0,234,0.7986,False,False,False,False,El Departamento de Pronóstico de INSIVUMEH prevé un incremento en las lluvias du...
+youtube_videos,view_count,str,entero,293,293,0,0.0,0,0.0,267,0.9113,False,False,False,False,2357
+youtube_videos,publish_date,str,fecha_iso8601,293,293,0,0.0,0,0.0,293,1.0,False,False,False,False,2026-08-28T22:00:20-07:00
+youtube_videos,upload_date,str,fecha_iso8601,293,293,0,0.0,0,0.0,293,1.0,False,False,False,False,2026-08-28T22:00:20-07:00
+youtube_videos,category,str,texto,293,293,0,0.0,0,0.0,11,0.0375,False,False,False,False,News & Politics
+youtube_videos,owner_handle,str,texto,293,293,0,0.0,0,0.0,97,0.3311,False,False,False,False,/@T13NoticiasGuatemala

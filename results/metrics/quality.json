@@ -1,0 +1,328 @@
+{
+  "duplicados_videos": {
+    "dataset": "youtube_videos",
+    "n_filas": 293,
+    "n_columnas": 20,
+    "filas_duplicadas_completas": 0,
+    "llaves": {
+      "video_id": {
+        "duplicados": 0,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 293,
+        "es_unica": true
+      },
+      "channel_id": {
+        "duplicados": 196,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 97,
+        "es_unica": false
+      }
+    }
+  },
+  "duplicados_comentarios": {
+    "dataset": "youtube_comments",
+    "n_filas": 406,
+    "n_columnas": 17,
+    "filas_duplicadas_completas": 0,
+    "llaves": {
+      "video_id": {
+        "duplicados": 387,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 19,
+        "es_unica": false
+      },
+      "comment_id": {
+        "duplicados": 0,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 406,
+        "es_unica": true
+      },
+      "channel_id": {
+        "duplicados": 398,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 8,
+        "es_unica": false
+      },
+      "author_channel_id": {
+        "duplicados": 74,
+        "nulos": 0,
+        "vacios": 0,
+        "unicos": 332,
+        "es_unica": false
+      }
+    }
+  },
+  "variables_constantes_videos": [],
+  "variables_constantes_comentarios": [
+    "is_pinned",
+    "viewer_rating"
+  ],
+  "variables_totalmente_vacias_comentarios": [
+    "viewer_rating"
+  ],
+  "variables_con_nulos_videos": [
+    {
+      "variable": "published_time",
+      "n_nulos": 13,
+      "pct_nulos": 4.44
+    },
+    {
+      "variable": "view_count_text",
+      "n_nulos": 13,
+      "pct_nulos": 4.44
+    },
+    {
+      "variable": "description_snippet",
+      "n_nulos": 25,
+      "pct_nulos": 8.53
+    },
+    {
+      "variable": "description",
+      "n_nulos": 26,
+      "pct_nulos": 8.87
+    }
+  ],
+  "variables_con_nulos_comentarios": [
+    {
+      "variable": "viewer_rating",
+      "n_nulos": 406,
+      "pct_nulos": 100.0
+    }
+  ],
+  "likes_en_blanco": 189,
+  "pct_likes_en_blanco": 46.55,
+  "min_like_no_blanco": 1,
+  "chequeos_consistencia_total": 17,
+  "chequeos_consistencia_ok": 15,
+  "chequeos_consistencia_fallidos": [
+    "author_handle sin percent-encoding",
+    "channel_handle sin percent-encoding"
+  ],
+  "outliers": [
+    {
+      "dataset": "youtube_videos",
+      "variable": "view_count_num",
+      "n": 293,
+      "min": 2.0,
+      "p25": 215.0,
+      "mediana": 1175.0,
+      "media": 60430.09,
+      "p75": 7465.0,
+      "p90": 51318.8000000001,
+      "p99": 523972.5599999961,
+      "max": 8190449.0,
+      "std": 515798.31,
+      "asimetria": 14.258,
+      "curtosis": 217.268,
+      "limite_iqr_inf": -10660.0,
+      "limite_iqr_sup": 18340.0,
+      "n_atipicos_iqr": 49,
+      "pct_atipicos_iqr": 16.72,
+      "n_atipicos_z_robusto_3.5": 76,
+      "ratio_max_mediana": 6970.6
+    },
+    {
+      "dataset": "youtube_videos",
+      "variable": "title_len",
+      "n": 293,
+      "min": 6.0,
+      "p25": 43.0,
+      "mediana": 59.0,
+      "media": 60.45,
+      "p75": 82.0,
+      "p90": 92.0,
+      "p99": 100.0,
+      "max": 100.0,
+      "std": 22.9,
+      "asimetria": -0.08,
+      "curtosis": -0.817,
+      "limite_iqr_inf": -15.5,
+      "limite_iqr_sup": 140.5,
+      "n_atipicos_iqr": 0,
+      "pct_atipicos_iqr": 0.0,
+      "n_atipicos_z_robusto_3.5": 0,
+      "ratio_max_mediana": 1.7
+    },
+    {
+      "dataset": "youtube_videos",
+      "variable": "description_len",
+      "n": 293,
+      "min": 0.0,
+      "p25": 64.0,
+      "mediana": 236.0,
+      "media": 427.5,
+      "p75": 602.0,
+      "p90": 1126.2,
+      "p99": 2740.7599999999984,
+      "max": 3538.0,
+      "std": 540.34,
+      "asimetria": 2.451,
+      "curtosis": 7.871,
+      "limite_iqr_inf": -743.0,
+      "limite_iqr_sup": 1409.0,
+      "n_atipicos_iqr": 17,
+      "pct_atipicos_iqr": 5.8,
+      "n_atipicos_z_robusto_3.5": 23,
+      "ratio_max_mediana": 15.0
+    },
+    {
+      "dataset": "youtube_videos",
+      "variable": "n_keywords",
+      "n": 293,
+      "min": 0.0,
+      "p25": 0.0,
+      "mediana": 0.0,
+      "media": 6.1,
+      "p75": 7.0,
+      "p90": 21.0,
+      "p99": 43.15999999999997,
+      "max": 53.0,
+      "std": 9.87,
+      "asimetria": 1.992,
+      "curtosis": 4.071,
+      "limite_iqr_inf": -10.5,
+      "limite_iqr_sup": 17.5,
+      "n_atipicos_iqr": 40,
+      "pct_atipicos_iqr": 13.65,
+      "n_atipicos_z_robusto_3.5": 0,
+      "ratio_max_mediana": NaN
+    },
+    {
+      "dataset": "youtube_videos",
+      "variable": "n_query_hits",
+      "n": 293,
+      "min": 1.0,
+      "p25": 1.0,
+      "mediana": 1.0,
+      "media": 1.02,
+      "p75": 1.0,
+      "p90": 1.0,
+      "p99": 2.0,
+      "max": 2.0,
+      "std": 0.13,
+      "asimetria": 7.496,
+      "curtosis": 54.564,
+      "limite_iqr_inf": 1.0,
+      "limite_iqr_sup": 1.0,
+      "n_atipicos_iqr": 5,
+      "pct_atipicos_iqr": 1.71,
+      "n_atipicos_z_robusto_3.5": 0,
+      "ratio_max_mediana": 2.0
+    },
+    {
+      "dataset": "youtube_comments",
+      "variable": "like_count",
+      "n": 406,
+      "min": 0.0,
+      "p25": 0.0,
+      "mediana": 1.0,
+      "media": 5.73,
+      "p75": 2.0,
+      "p90": 7.0,
+      "p99": 111.29999999999961,
+      "max": 405.0,
+      "std": 30.66,
+      "asimetria": 9.878,
+      "curtosis": 108.953,
+      "limite_iqr_inf": -3.0,
+      "limite_iqr_sup": 5.0,
+      "n_atipicos_iqr": 48,
+      "pct_atipicos_iqr": 11.82,
+      "n_atipicos_z_robusto_3.5": 42,
+      "ratio_max_mediana": 405.0
+    },
+    {
+      "dataset": "youtube_comments",
+      "variable": "reply_count_num",
+      "n": 406,
+      "min": 0.0,
+      "p25": 0.0,
+      "mediana": 0.0,
+      "media": 0.13,
+      "p75": 0.0,
+      "p90": 0.0,
+      "p99": 3.0,
+      "max": 7.0,
+      "std": 0.58,
+      "asimetria": 7.205,
+      "curtosis": 65.718,
+      "limite_iqr_inf": 0.0,
+      "limite_iqr_sup": 0.0,
+      "n_atipicos_iqr": 30,
+      "pct_atipicos_iqr": 7.39,
+      "n_atipicos_z_robusto_3.5": 0,
+      "ratio_max_mediana": NaN
+    },
+    {
+      "dataset": "youtube_comments",
+      "variable": "len_original",
+      "n": 406,
+      "min": 1.0,
+      "p25": 50.0,
+      "mediana": 96.5,
+      "media": 139.24,
+      "p75": 178.25,
+      "p90": 285.5,
+      "p99": 838.0999999999982,
+      "max": 1525.0,
+      "std": 157.04,
+      "asimetria": 3.981,
+      "curtosis": 24.568,
+      "limite_iqr_inf": -142.375,
+      "limite_iqr_sup": 370.625,
+      "n_atipicos_iqr": 21,
+      "pct_atipicos_iqr": 5.17,
+      "n_atipicos_z_robusto_3.5": 19,
+      "ratio_max_mediana": 15.8
+    },
+    {
+      "dataset": "youtube_comments",
+      "variable": "tokens_original",
+      "n": 406,
+      "min": 1.0,
+      "p25": 8.0,
+      "mediana": 16.0,
+      "media": 24.06,
+      "p75": 31.0,
+      "p90": 49.0,
+      "p99": 129.74999999999994,
+      "max": 282.0,
+      "std": 27.64,
+      "asimetria": 4.187,
+      "curtosis": 27.621,
+      "limite_iqr_inf": -26.5,
+      "limite_iqr_sup": 65.5,
+      "n_atipicos_iqr": 22,
+      "pct_atipicos_iqr": 5.42,
+      "n_atipicos_z_robusto_3.5": 21,
+      "ratio_max_mediana": 17.6
+    },
+    {
+      "dataset": "youtube_comments",
+      "variable": "n_emojis",
+      "n": 406,
+      "min": 0.0,
+      "p25": 0.0,
+      "mediana": 0.0,
+      "media": 0.49,
+      "p75": 0.0,
+      "p90": 1.0,
+      "p99": 7.0,
+      "max": 18.0,
+      "std": 1.7,
+      "asimetria": 5.621,
+      "curtosis": 41.422,
+      "limite_iqr_inf": 0.0,
+      "limite_iqr_sup": 0.0,
+      "n_atipicos_iqr": 61,
+      "pct_atipicos_iqr": 15.02,
+      "n_atipicos_z_robusto_3.5": 0,
+      "ratio_max_mediana": NaN
+    }
+  ]
+}

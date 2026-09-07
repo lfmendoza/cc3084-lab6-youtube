@@ -1,0 +1,65 @@
+{
+  "videos_shape": [
+    293,
+    20
+  ],
+  "comments_shape": [
+    406,
+    17
+  ],
+  "videos_shape_esperado": [
+    293,
+    20
+  ],
+  "comments_shape_esperado": [
+    406,
+    17
+  ],
+  "videos_shape_coincide": true,
+  "comments_shape_coincide": true,
+  "videos_columnas": [
+    "video_id",
+    "title",
+    "channel_name",
+    "channel_id",
+    "source_query",
+    "source_group",
+    "dataset_sources",
+    "channel_handle",
+    "published_time",
+    "view_count_text",
+    "description_snippet",
+    "video_url",
+    "query_hits",
+    "keywords",
+    "description",
+    "view_count",
+    "publish_date",
+    "upload_date",
+    "category",
+    "owner_handle"
+  ],
+  "comments_columnas": [
+    "video_id",
+    "comment_id",
+    "video_title",
+    "channel_name",
+    "channel_id",
+    "author_name",
+    "author_channel_id",
+    "text",
+    "source_query",
+    "source_group",
+    "dataset_sources",
+    "author_handle",
+    "published_text",
+    "like_count_text",
+    "reply_count",
+    "is_pinned",
+    "viewer_rating"
+  ],
+  "encoding": "utf-8-sig (los dos archivos traen BOM)",
+  "dtype_carga": "str en todas las columnas; conversion posterior explicita",
+  "md5_videos": "d338be279d181215295037b0c938862b",
+  "md5_comments": "c45c1dcc72e33971106845e6a9674b9e"
+}

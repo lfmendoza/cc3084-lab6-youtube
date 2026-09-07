@@ -1,0 +1,18 @@
+ambito,chequeo,esperado,obtenido,cumple,nota
+videos,channel_id <-> channel_name es 1:1,1 y 1,1 y 1,True,Un ID por nombre visible y viceversa; no hay colisiones de nombre.
+videos,channel_id <-> channel_handle es 1:1,1 y 1,1 y 1,True,Un ID por nombre visible y viceversa; no hay colisiones de nombre.
+videos,owner_handle == channel_handle,0 diferencias,0 diferencias,True,owner_handle es redundante: se conserva pero no se usa.
+videos,publish_date == upload_date,0 diferencias,0 diferencias,True,upload_date es redundante en este conjunto.
+videos,video_url contiene video_id,0 inconsistencias,0,True,Confirma que video_url y video_id refieren al mismo recurso.
+comentarios,author_channel_id <-> author_name es 1:1,1 y 1,1 y 1,True,Sin alias ni homonimos en la ventana observada.
+comentarios,author_channel_id <-> author_handle es 1:1,1 y 1,1 y 1,True,Sin alias ni homonimos en la ventana observada.
+comentarios,channel_id <-> channel_name es 1:1,1 y 1,1 y 1,True,Sin alias ni homonimos en la ventana observada.
+comentarios,channel_id != author_channel_id,0 coincidencias,0,True,Ningun comentario observado fue escrito por el canal dueno del video.
+join,video_title == title,0 diferencias,0 diferencias,True,Variable redundante tras el join; se conserva solo la de videos.
+join,channel_id (comments) == channel_id (videos),0 diferencias,0 diferencias,True,Variable redundante tras el join; se conserva solo la de videos.
+join,channel_name (comments) == channel_name (videos),0 diferencias,0 diferencias,True,Variable redundante tras el join; se conserva solo la de videos.
+join,source_query (comments) == source_query (videos),no necesariamente igual,188 de 406 difieren,True,Difieren por diseno: la del comentario describe como se recolecto el comentario y la del video como se encontro el video. Se conservan ambas con sufijo explicito.
+join,source_group (comments) == source_group (videos),no necesariamente igual,188 de 406 difieren,True,Difieren por diseno: la del comentario describe como se recolecto el comentario y la del video como se encontro el video. Se conservan ambas con sufijo explicito.
+comentarios,author_handle sin percent-encoding,0 registros,14 registros codificados,False,ANOMALIA DETECTADA: author_handle guarda los caracteres no ASCII codificados para URL (/@ErmeP%C3%A9rez-q4s) mientras author_name los guarda literales. Se corrige decodificando en author_handle_norm; el campo original se conserva intacto.
+comentarios,author_handle_norm == author_name normalizado,0 diferencias,0 diferencias,True,"Tras decodificar, las dos etiquetas visibles de cada autor coinciden, lo que confirma que describen la misma cuenta."
+videos,channel_handle sin percent-encoding,0 registros,13 registros codificados,False,Los handles de canal no presentan la anomalia de codificacion.
