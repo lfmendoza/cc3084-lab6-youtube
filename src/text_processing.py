@@ -28,6 +28,9 @@ RE_DIGIT_TOKEN = re.compile(r"^\d+(?:[.,]\d+)*$")
 RE_WS = re.compile(r"\s+")
 RE_REPEAT = re.compile(r"(.)\1{2,}")
 #: Conteos con separador de miles y/o sufijo abreviado (K/M/B/mil/millones).
+#: Atajos de emoji ya textualizados por el recolector (``:hand-purple-blue-peace:``).
+#: Aparecen literalmente en el CSV crudo, no los produce este pipeline.
+RE_EMOJI_SHORTCODE = re.compile(r":[a-z0-9]+(?:[_-][a-z0-9]+)*:", re.IGNORECASE)
 RE_COUNT = re.compile(
     r"^\s*([\d]+(?:[.,\s  ][\d]{3})*(?:[.,][\d]+)?)\s*"
     r"(k|m|b|mil|millones|millon|mill|kk)?\b",
@@ -205,6 +208,18 @@ def extract_emojis(text: str) -> list[str]:
     return [d["emoji"] for d in emoji.emoji_list(text or "")]
 
 
+def extract_emoji_shortcodes(text: str) -> list[str]:
+    """Atajos de emoji que el recolector dejo como texto en el CSV crudo.
+
+    Cuatro apariciones en dos comentarios (``:hand-purple-blue-peace:`` y
+    ``:face-blue-smiling:``). No son emojis Unicode, asi que ``emoji`` no los
+    detecta, y si no se tratan aparecen como los bigramas "hand purple" o
+    "purple blue" en el analisis de contenido: vocabulario inventado por el
+    proceso de recoleccion, no por los usuarios.
+    """
+    return [m.group(0) for m in RE_EMOJI_SHORTCODE.finditer(text or "")]
+
+
 @lru_cache(maxsize=1)
 def _spanish_stopwords() -> frozenset[str]:
     """Stopwords de espanol: NLTK + spaCy + lista de dominio."""
@@ -240,7 +255,9 @@ def clean_text(text: str) -> dict:
     Secuencia (ejercicio 2.6), en este orden por dependencia:
 
     1. Extraer emojis, URLs, hashtags y menciones **antes** de destruirlos.
-    2. Quitar URLs (no aportan tema y contaminan el vocabulario).
+    2. Quitar URLs y los atajos de emoji textualizados por el recolector
+       (``:hand-purple-blue-peace:``), que si no producirian bigramas
+       inexistentes como "hand purple".
     3. Quitar el ``#`` conservando la palabra del hashtag como token tematico.
     4. Quitar las menciones completas: identifican cuentas, no tema.
     5. Reemplazar cada emoji por espacio en la version tematica (su contenido
@@ -253,11 +270,13 @@ def clean_text(text: str) -> dict:
     """
     original = "" if text is None else str(text)
     emojis = extract_emojis(original)
+    shortcodes = extract_emoji_shortcodes(original)
     urls = extract_urls(original)
     hashtags = extract_hashtags(original)
     mentions = extract_mentions(original)
 
     work = RE_URL.sub(" ", original)
+    work = RE_EMOJI_SHORTCODE.sub(" ", work)
     work = RE_MENTION.sub(" ", work)
     work = RE_HASHTAG.sub(r" \1 ", work)
     work = emoji.replace_emoji(work, replace=" ")
@@ -283,6 +302,7 @@ def clean_text(text: str) -> dict:
         "mentions": mentions,
         "urls": urls,
         "emojis": emojis,
+        "emoji_shortcodes": shortcodes,
     }
 
 

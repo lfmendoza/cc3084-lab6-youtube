@@ -436,6 +436,8 @@ def build_text_versions(comments: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     df["mentions"] = parsed.map(lambda d: d["mentions"])
     df["urls"] = parsed.map(lambda d: d["urls"])
     df["emojis"] = parsed.map(lambda d: d["emojis"])
+    df["emoji_shortcodes"] = parsed.map(lambda d: d["emoji_shortcodes"])
+    df["n_emoji_shortcodes"] = df["emoji_shortcodes"].map(len)
     df["n_hashtags"] = df["hashtags"].map(len)
     df["n_mentions"] = df["mentions"].map(len)
     df["n_urls"] = df["urls"].map(len)
@@ -479,6 +481,15 @@ def build_text_versions(comments: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         "comentarios_con_mencion": int((df["n_mentions"] > 0).sum()),
         "comentarios_con_emoji": int((df["n_emojis"] > 0).sum()),
         "total_emojis": int(df["n_emojis"].sum()),
+        "comentarios_con_atajo_de_emoji_textual": int((df["n_emoji_shortcodes"] > 0).sum()),
+        "total_atajos_de_emoji_textual": int(df["n_emoji_shortcodes"].sum()),
+        "nota_atajos_de_emoji": (
+            "El CSV crudo contiene atajos de emoji ya convertidos a texto por "
+            "el recolector (:hand-purple-blue-peace:, :face-blue-smiling:). Se "
+            "eliminan de texto_limpio porque generarian bigramas inexistentes "
+            "('hand purple', 'purple blue') atribuibles al proceso de "
+            "recoleccion y no a los usuarios. Se conservan en texto_original."
+        ),
     }
     return df, {**before, **after}
 

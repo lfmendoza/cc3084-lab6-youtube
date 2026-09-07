@@ -46,14 +46,15 @@ def apply_style() -> None:
 def save(fig, name: str, caption: str = "") -> Path:
     """Guarda la figura en ``results/figures`` y registra su caption.
 
-    El caption se persiste junto a la imagen para que el informe lo tome del
-    pipeline y no de texto escrito a mano.
+    El caption **no** se dibuja dentro del PNG: incrustado ahi queda a un
+    tamano ilegible cuando la figura se escala para el PDF, y se duplicaria
+    con el pie que el informe ya renderiza a tamano de lectura. Se persiste en
+    ``_captions.jsonl``, de donde lo toman el informe en PDF y en Markdown,
+    de modo que sigue siendo una salida computada por el pipeline y no texto
+    escrito a mano.
     """
     apply_style()
     path = C.FIGURES / name
-    if caption:
-        fig.text(0.5, -0.035, caption, ha="center", va="top", fontsize=8,
-                 style="italic", color="#333333", wrap=True)
     fig.savefig(path, dpi=C.FIG_DPI, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     (C.FIGURES / "_captions.jsonl").open("a", encoding="utf-8").write(

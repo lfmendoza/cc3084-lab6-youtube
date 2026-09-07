@@ -1448,6 +1448,7 @@ def community_profile(VP: nx.Graph, communities: dict, comments: pd.DataFrame,
         shared = sub.groupby("author_channel_id")["video_id"].nunique()
         rows_summary.append({
             "comunidad": i,
+            "comunidad_id": f"C{i}",
             "n_videos": len(p),
             "es_singleton": len(p) == 1,
             "n_canales": int(vinfo["channel_id"].nunique()),
@@ -1636,9 +1637,11 @@ def _centrality_summary(ac, vc, arts, bridges) -> dict:
             ["raw_id", "display_name", "channel_name", "degree", "strength",
              "betweenness_ponderada"]].to_dict("records"),
         "articuladores_verificados": arts[arts.es_articulador_verificado][
-            ["red", "raw_id", "display_name", "channel_name", "degree",
+            ["red", "raw_id", "display_name", "channel_name", "degree", "strength",
              "componentes_antes", "componentes_despues", "delta_componentes",
-             "reduccion_componente_mayor", "nodos_aislados_tras_eliminar"]
+             "componente_mayor_antes", "componente_mayor_despues",
+             "reduccion_componente_mayor", "pct_reduccion_componente_mayor",
+             "nodos_aislados_tras_eliminar"]
         ].to_dict("records") if len(arts) else [],
         "n_articuladores_por_red": arts[arts.es_articulador_verificado].groupby("red").size()
             .to_dict() if len(arts) else {},

@@ -125,7 +125,8 @@ def ngrams_top(texts: pd.Series, n: int = 1, top: int = 25) -> pd.DataFrame:
         }
         for g, c in counter.most_common(top)
     ]
-    return pd.DataFrame(rows)
+    cols = ["ngram", "n", "frecuencia", "pct_del_total", "n_documentos", "pct_documentos"]
+    return pd.DataFrame(rows, columns=cols)
 
 
 # ==================================================================== 3.1 ===
