@@ -1,0 +1,26 @@
+{
+  "n_elementos": 491,
+  "n_tablas": 83,
+  "n_figuras_referenciadas": 29,
+  "n_secciones_h1": 23,
+  "markdown_caracteres": 185503,
+  "markdown_lineas": 2321,
+  "validacion_pdf": {
+    "existe": true,
+    "tamano_bytes": 13436948,
+    "tamano_kb": 13122.0,
+    "n_paginas": 80,
+    "n_caracteres_texto": 178371,
+    "n_imagenes": 29,
+    "secciones_faltantes": [],
+    "paginas_con_poco_texto": [],
+    "n_caracteres_unicode_rotos": 0,
+    "ok_existe": true,
+    "ok_tamano": true,
+    "ok_multiples_paginas": true,
+    "ok_texto_extraible": true,
+    "ok_todas_las_secciones": true,
+    "ok_figuras_incrustadas": true,
+    "ok_sin_unicode_roto": true
+  }
+}
