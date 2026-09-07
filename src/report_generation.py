@@ -305,31 +305,72 @@ class Doc(BaseDocTemplate):
         self._footer(canv, doc, w)
 
 
-def _register_fonts() -> tuple[str, str, str]:
-    """Registra DejaVu si esta disponible (soporta κ, Δ, ≥, ·, comillas)."""
-    candidates = [
-        Path("/usr/share/fonts/truetype/dejavu"),
-        Path("/usr/share/fonts/TTF"),
-        Path("/usr/share/fonts/dejavu"),
-    ]
-    for base in candidates:
-        reg, bold, ital = (base / "DejaVuSans.ttf", base / "DejaVuSans-Bold.ttf",
-                           base / "DejaVuSans-Oblique.ttf")
-        if reg.exists() and bold.exists():
-            try:
-                pdfmetrics.registerFont(TTFont("DejaVu", str(reg)))
-                pdfmetrics.registerFont(TTFont("DejaVu-Bold", str(bold)))
-                if ital.exists():
-                    pdfmetrics.registerFont(TTFont("DejaVu-Italic", str(ital)))
-                    from reportlab.pdfbase.pdfmetrics import registerFontFamily
+#: Familias tipograficas candidatas, en orden de preferencia. Cada entrada
+#: debe aportar las **cuatro** caras: sin ellas, ``registerFontFamily`` no
+#: puede mapear ``<b>`` ni ``<i>`` y el enfasis en linea se pierde en silencio.
+#: Se exigen tambien los glifos de kappa, Delta, >=, comillas angulares y
+#: rayas, que aparecen en el informe. DejaVu tiene la mejor cobertura pero en
+#: muchas distribuciones no incluye la cara oblicua, por lo que va despues de
+#: FreeSans, que si trae las cuatro.
+FONT_FAMILIES = [
+    ("FreeSans", "/usr/share/fonts/truetype/freefont",
+     ("FreeSans.ttf", "FreeSansBold.ttf", "FreeSansOblique.ttf",
+      "FreeSansBoldOblique.ttf")),
+    ("DejaVuSans", "/usr/share/fonts/truetype/dejavu",
+     ("DejaVuSans.ttf", "DejaVuSans-Bold.ttf", "DejaVuSans-Oblique.ttf",
+      "DejaVuSans-BoldOblique.ttf")),
+    ("LiberationSans", "/usr/share/fonts/truetype/liberation",
+     ("LiberationSans-Regular.ttf", "LiberationSans-Bold.ttf",
+      "LiberationSans-Italic.ttf", "LiberationSans-BoldItalic.ttf")),
+]
 
-                    registerFontFamily("DejaVu", normal="DejaVu", bold="DejaVu-Bold",
-                                       italic="DejaVu-Italic", boldItalic="DejaVu-Bold")
-                    return "DejaVu", "DejaVu-Bold", "DejaVu-Italic"
-                return "DejaVu", "DejaVu-Bold", "DejaVu"
-            except Exception:
-                pass
+#: Caracteres que el informe usa y que la fuente elegida debe poder dibujar.
+REQUIRED_GLYPHS = "κΔ≥«»·—–±áéíóúñ¿¡"
+
+
+def _register_fonts() -> tuple[str, str, str]:
+    """Registra una familia con las cuatro caras y cobertura verificada.
+
+    Devuelve ``(normal, bold, italic)``. Registrar la familia completa con
+    ``registerFontFamily`` es lo que hace que ``<b>`` y ``<i>`` surtan efecto
+    en los parrafos: sin ese mapeo, ReportLab ignora las etiquetas y el
+    enfasis en linea desaparece sin aviso.
+    """
+    for family, base_dir, faces in FONT_FAMILIES:
+        base = Path(base_dir)
+        paths = [base / f for f in faces]
+        if not all(x.exists() for x in paths):
+            continue
+        if not _covers_glyphs(paths[0]):
+            continue
+        names = (family, f"{family}-Bold", f"{family}-Italic",
+                 f"{family}-BoldItalic")
+        try:
+            for name, path in zip(names, paths):
+                pdfmetrics.registerFont(TTFont(name, str(path)))
+            from reportlab.pdfbase.pdfmetrics import registerFontFamily
+
+            registerFontFamily(family, normal=names[0], bold=names[1],
+                               italic=names[2], boldItalic=names[3])
+            return names[0], names[1], names[2]
+        except Exception:
+            continue
+    # Ultimo recurso: las base-14, que no cubren griego ni matematicas. El
+    # saneador de caracteres evita cuadros vacios, aunque el informe pierde
+    # los simbolos.
     return "Helvetica", "Helvetica-Bold", "Helvetica-Oblique"
+
+
+def _covers_glyphs(path: Path) -> bool:
+    """Comprueba que la cara regular pueda dibujar los caracteres del informe."""
+    try:
+        from PIL import ImageFont
+
+        font = ImageFont.truetype(str(path), 24)
+        return all(font.getmask(ch).getbbox() is not None
+                   for ch in REQUIRED_GLYPHS)
+    except Exception:
+        return True  # sin PIL no se puede comprobar; no se bloquea por eso
 
 
 def _styles(font: str, bold: str, ital: str) -> dict:

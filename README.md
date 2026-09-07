@@ -7,7 +7,7 @@ partir de dos conjuntos de datos: un catálogo de **293 videos** de **97 canales
 y **406 comentarios principales** publicados por **332 autores** distintos.
 
 📄 **Informe final:** [`report/Laboratorio_6_Analisis_Redes_Sociales_YouTube.pdf`](report/Laboratorio_6_Analisis_Redes_Sociales_YouTube.pdf)
-(80 páginas, 29 figuras, 83 tablas)
+(78 páginas, 29 figuras, 83 tablas)
 📝 **Fuente editable:** [`report/laboratorio_6_reporte.md`](report/laboratorio_6_reporte.md)
 🤖 **Reporte del modelo de sentimiento:** [`results/model/sentiment_model_report.md`](results/model/sentiment_model_report.md)
 ✅ **Auditoría contra la rúbrica:** [`docs/rubric_checklist.md`](docs/rubric_checklist.md)

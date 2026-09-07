@@ -6,7 +6,7 @@ Laboratorio 6 — CC3084 Data Science — Análisis de redes sociales (YouTube)
 
 - [x] **Informe final en PDF**
   `report/Laboratorio_6_Analisis_Redes_Sociales_YouTube.pdf`
-  80 páginas · 29 figuras incrustadas · 83 tablas · 23 secciones · 178 k
+  78 páginas · 29 figuras incrustadas · 83 tablas · 23 secciones · 178 k
   caracteres de texto extraíble. Validado automáticamente en cada corrida
   (existencia, tamaño, número de páginas, texto extraíble, presencia de las 21
   secciones obligatorias, figuras incrustadas y ausencia de Unicode roto).

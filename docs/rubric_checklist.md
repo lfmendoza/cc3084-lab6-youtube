@@ -120,7 +120,7 @@ por dependencia externa realmente inevitable).
 
 | # | Requisito | Estado | Evidencia |
 |---|---|---|---|
-| 40 | Informe en PDF con resultados, visualizaciones, interpretación y conclusiones | COMPLETE | `report/Laboratorio_6_Analisis_Redes_Sociales_YouTube.pdf` — 80 páginas, 29 figuras incrustadas, 83 tablas, 23 secciones, 178 k caracteres de texto extraíble. Validado automáticamente (páginas, texto, secciones, figuras, Unicode) |
+| 40 | Informe en PDF con resultados, visualizaciones, interpretación y conclusiones | COMPLETE | `report/Laboratorio_6_Analisis_Redes_Sociales_YouTube.pdf` — 78 páginas, 29 figuras incrustadas, 83 tablas, 23 secciones, 178 k caracteres de texto extraíble. Validado automáticamente (páginas, texto, secciones, figuras, Unicode) |
 | 41 | Script reproducible de Python | COMPLETE | `src/` (13 módulos) + `scripts/run_analysis.sh`. Comando único: `uv run python -m src.run_all` |
 | 42 | Enlace al espacio colaborativo del grupo | BLOCKED (dependencia externa) | No existe información local que permita descubrirlo y no se inventa. Registrado como pendiente externo en `docs/submission_checklist.md`. **No afecta ningún requisito analítico.** |
 | 43 | Enlace al repositorio de versionado | COMPLETE | https://github.com/lfmendoza/cc3084-lab6-youtube (privado) — también en el README |

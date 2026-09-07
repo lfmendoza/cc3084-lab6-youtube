@@ -3,7 +3,7 @@
 **Laboratorio 6 — CC3084 Data Science — Analisis de redes sociales (YouTube)**
 Documento generado automaticamente por `src/content_analysis.py` a partir de
 `results/metrics/sentiment.json`. Fecha de ejecucion (UTC):
-`2026-09-07T03:42:35+00:00`.
+`2026-09-07T03:48:52+00:00`.
 
 ---
 
@@ -23,7 +23,7 @@ Documento generado automaticamente por `src/content_analysis.py` a partir de
 | Python / plataforma | 3.13.14 / Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64) |
 | Dispositivo de inferencia | `cpu` (CUDA disponible: False) |
 | Semilla | 42 |
-| Tiempo de inferencia | 25.58 s para 406 comentarios (15.9 comentarios/s) |
+| Tiempo de inferencia | 25.5 s para 406 comentarios (15.9 comentarios/s) |
 
 ## 2. Motivo de la seleccion
 

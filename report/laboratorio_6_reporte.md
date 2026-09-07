@@ -1760,8 +1760,8 @@ Hay 199 emojis en 61 de 406 comentarios (15.0%). Se eliminan de `texto_limpio` p
 | max_length / truncation / batch | 128 / True / 32 |
 | Dispositivo | cpu (Linux 6.18.33.2-microsoft-standard-WSL2 (x86_64)) |
 | Semilla | 42 |
-| Fecha de ejecucion (UTC) | 2026-09-07T03:42:35+00:00 |
-| Tiempo de inferencia | 25.58 s (15.9 com./s) |
+| Fecha de ejecucion (UTC) | 2026-09-07T03:48:52+00:00 |
+| Tiempo de inferencia | 25.5 s (15.9 com./s) |
 
 **Por que este modelo y no un lexico.** RoBERTuito es un RoBERTa preentrenado desde cero sobre aproximadamente 500 millones de tweets en espanol y afinado para polaridad con el corpus TASS 2020. Cumple tres condiciones que los comentarios de este conjunto exigen: es un modelo **de espanol**, no multilingue, de modo que su vocabulario no compite con otras cien lenguas; su dominio de preentrenamiento es **texto informal de redes sociales**, que comparte con los comentarios de YouTube la brevedad, los emojis y la ortografia libre; y devuelve **tres clases con probabilidades**, lo que permite reportar distribucion y confianza sin inventar umbrales.
 
