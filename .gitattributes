@@ -1,0 +1,9 @@
+# Los CSV de data/raw son la fuente inmutable del analisis: se versionan
+# byte a byte para que su md5 siga coincidiendo tras un clon en cualquier
+# sistema operativo.
+data/raw/*.csv -text
+data/processed/*.csv -text
+results/tables/*.csv -text
+results/networks/*.csv -text
+*.pdf -text -diff
+*.png -text -diff
